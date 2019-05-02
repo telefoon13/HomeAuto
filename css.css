@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: #02529F;
+    background-color: azure;
+}
+
+a{
+    color: #02529F;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #02529F;
+    text-decoration: none;
+}
