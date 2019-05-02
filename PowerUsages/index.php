@@ -61,20 +61,27 @@
             </a>
         </div>
     </div>
-
-    <div class="row" style="height: 200px">
-        <div class="col-3  text-center">
-            Day power today : 25,45 kWh<br>
-            Night power today : 12,74 kWh
+    <?php
+    include_once ("../Helpers/GetPOW.php");
+    ?>
+    <div class="row"  style="height: 200px">
+        <div class="col-3 align-self-center  text-center">
+            <h4>Day power today</h4>
+            <h4>xx.xx kWh</h4>
+            <h4>Night power today</h4>
+            <h4>xx.xx kWh</h4>
         </div>
-        <div class="col-3 text-center">
-            Gas usage today : 0,5 M³
+        <div class="col-3 align-self-center  text-center">
+            <h4>Gas usage today</h4>
+            <h4>xx.xx M³</h4>
         </div>
-        <div class="col-3 text-center">
-            Water usage today : 1,5 M³
+        <div class="col-3 align-self-center  text-center">
+            <h4>Water usage today</h4>
+            <h4>xx.xx M³</h4>
         </div>
-        <div class="col-3 text-center">
-            Power usage today : 0,056 kWh
+        <div class="col-3 align-self-center  text-center">
+            <h4>Power usage today</h4>
+            <h4><?= GetPOW::getPowerToday("192.168.178.156"); ?> kWh</h4>
         </div>
     </div>
 </div>
