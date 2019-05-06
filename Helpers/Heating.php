@@ -15,12 +15,54 @@ class Heating
     public static function login(){
         $smartphoneId = "HomeAutoMike1";
         $username = "mikedhoore";
-        $password = "********";
-        //$token = (new self)->GetNewToken($smartphoneId,$username,$password);
-        //(new self)->GetCookiesWithToken($smartphoneId,$username,$token);
-        $sysInfo = (new self)->getMainSystemInfo();
-        return $sysInfo;
+        $password = "******";
+        $token = (new self)->GetNewToken($smartphoneId,$username,$password);
+        (new self)->GetCookiesWithToken($smartphoneId,$username,$token);
     }
+
+    public static function getMainSystemInfo(){
+        $getSystemInfoURL = (new self)->baseURL . "facilities";
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+        curl_setopt ($ch, CURLOPT_URL, $getSystemInfoURL);
+        curl_setopt ($ch, CURLOPT_COOKIEFILE, '/tmp/Vaillant_cookie.txt');
+        $return = curl_exec($ch);
+        curl_close ($ch);
+        $values = json_decode($return,true);
+        $sysInfoArray = array(
+            "serialNumber"=>$values['body']['facilitiesList'][0]['serialNumber'],
+            "name"=>$values['body']['facilitiesList'][0]['name'],
+            "responsibleCountryCode"=>$values['body']['facilitiesList'][0]['responsibleCountryCode'],
+            "supportedBrand"=>$values['body']['facilitiesList'][0]['supportedBrand'],
+            "capabilities"=>$values['body']['facilitiesList'][0]['capabilities'][0] . " + ". $values['body']['facilitiesList'][0]['capabilities'][1],
+            "macAddressEthernet"=>$values['body']['facilitiesList'][0]['networkInformation']['macAddressEthernet'],
+            "macAddressWifiAccessPoint"=>$values['body']['facilitiesList'][0]['networkInformation']['macAddressWifiAccessPoint'],
+            "macAddressWifiClient"=>$values['body']['facilitiesList'][0]['networkInformation']['macAddressWifiClient'],
+            "firmwareVersion"=>$values['body']['facilitiesList'][0]['firmwareVersion']
+        );
+        return $sysInfoArray;
+    }
+
+    public static function getAllDevices(){
+        $serial = self::getMainSystemInfo()["serialNumber"];
+        $getDevicesURL = (new self)->baseURL . "facilities/".$serial."/rbr/v1/rooms";
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+        curl_setopt ($ch, CURLOPT_URL, $getDevicesURL);
+        curl_setopt ($ch, CURLOPT_COOKIEFILE, '/tmp/Vaillant_cookie.txt');
+        $return = curl_exec($ch);
+        curl_close ($ch);
+        $values = json_decode($return,true);
+        return $values;
+    }
+
+
+
+
+
+
 
     //Function to get a token from Vaillant API
     private function GetNewToken($smartphoneId,$username,$password){
@@ -60,18 +102,6 @@ class Heating
         curl_setopt($ch, CURLOPT_COOKIEJAR, '/tmp/Vaillant_cookie.txt');
         curl_exec($ch);
         curl_close ($ch);
-    }
-
-    private function getMainSystemInfo(){
-        $getSystemInfoURL = $this->baseURL . "facilities";
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-        curl_setopt ($ch, CURLOPT_URL, $getSystemInfoURL);
-        curl_setopt ($ch, CURLOPT_COOKIEFILE, '/tmp/Vaillant_cookie.txt');
-        $return = curl_exec($ch);
-        curl_close ($ch);
-        return $return;
     }
 
     private function PostAPICallWithBodyAndReturn($URL, $body){
