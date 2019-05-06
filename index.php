@@ -62,7 +62,7 @@
 
     <div class="row" style="height: 200px">
         <div class="col-3 align-self-center text-center">
-            <a href="#">
+            <a href="Heating">
                 <i style="font-size: 80px; " class="fas fa-temperature-high"></i>
                 <h3>Heating</h3>
             </a>

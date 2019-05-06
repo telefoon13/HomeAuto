@@ -77,9 +77,15 @@
             </a>
         </div>
         <div class="col-6 align-self-center text-center">
+            <!--
             <a href="../SwitchLight/?IP=192.168.178.151&PORT=4&STATUS=ON&FROM=DownstairsLight&LIGHT=Garden">
                 <i style="font-size: 80px; " class="fas fa-tree"></i>
                 <h3>Garden</h3>
+            </a>
+            -->
+            <a href="../SwitchLight/?IP=192.168.178.155&PORT=1&STATUS=TOGGLE&FROM=DownstairsLight&LIGHT=Standing%20light">
+                <i style="font-size: 80px; " class="fas fa-grip-lines-vertical"></i>
+                <h3>Standing light</h3>
             </a>
         </div>
     </div>
