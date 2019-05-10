@@ -27,53 +27,61 @@
             <script type="text/javascript">window.onload = date_time('date_time');</script>
         </div>
         <div class="col-3 align-self-center text-center">
-            <!--<a href="#">
-                <i style="font-size: 80px; " class="fas fa-door-open"></i>
-                <h3>Leave home</h3>
-            </a>-->
+            <a href="#">
+                <i style="font-size: 80px;" class="fas fa-toolbox"></i>
+                <h3>Info & Options</h3>
+            </a>
         </div>
     </div>
 
     <?php
-    include_once ("../Helpers/Heating.php");
+    include_once ("../Helpers/Vaillant.php");
 
-    $sysinfo = Heating::getAllDevices();
+    $devices = Vaillant::getAllDevices();
+
+    function iconColor($deviceOperationMode){
+        switch ($deviceOperationMode) {
+            case "OFF":
+                echo "color:gray;";
+                break;
+            case "MANUAL":
+                echo "color:goldenrod;";
+                break;
+        }
+    }
     ?>
+
     <div class="row" style="height: 200px">
 
         <div class="col-3 align-self-center text-center">
-            <a href="#">
-                <i style="font-size: 80px;
-                <?php if ($sysinfo['body']['rooms'][0]['configuration']['operationMode'] == "OFF"){echo "color:gray;";}?>"
-                   class="fas fa-couch"></i>
-                <h3><?= $sysinfo['body']['rooms'][0]['configuration']['currentTemperature']; ?>&deg;C</h3>
+            <a href="valve/?room=0" <?php iconColor($devices[0]['operationMode']); ?>>
+                <i style="font-size: 80px;" class="fas fa-couch"></i>
+                <h3>Living room</h3>
+                <h3><?php echo $devices[0]["currentTemperature"]." / ".$devices[0]["temperatureSetpoint"]?>&deg;C</h3>
             </a>
         </div>
 
         <div class="col-3 align-self-center text-center">
-            <a href="#">
-                <i style="font-size: 80px;
-                <?php if ($sysinfo['body']['rooms'][1]['configuration']['operationMode'] == "OFF"){echo "color:gray;";}?>
-                        " class="fas fa-utensil-spoon"></i>
-                <h3><?= $sysinfo['body']['rooms'][1]['configuration']['currentTemperature']; ?>&deg;C</h3>
+            <a href="#" style="<?php iconColor($devices[1]['operationMode']); ?>">
+                <i style="font-size: 80px;" class="fas fa-utensil-spoon"></i>
+                <h3>Kitchen</h3>
+                <h3><?php echo $devices[1]["currentTemperature"]." / ".$devices[1]["temperatureSetpoint"]?>&deg;C</h3>
             </a>
         </div>
 
         <div class="col-3 align-self-center text-center">
-            <a href="#">
-                <i style="font-size: 80px;
-                <?php if ($sysinfo['body']['rooms'][2]['configuration']['operationMode'] == "OFF"){echo "color:gray;";}?>
-                        " class="fas fa-utensils"></i>
-                <h3><?= $sysinfo['body']['rooms'][2]['configuration']['currentTemperature']; ?>&deg;C</h3>
+            <a href="#" style="<?php iconColor($devices[2]['operationMode']); ?>">
+                <i style="font-size: 80px;" class="fas fa-utensils"></i>
+                <h3>Dinner room</h3>
+                <h3><?php echo $devices[2]["currentTemperature"]." / ".$devices[2]["temperatureSetpoint"]?>&deg;C</h3>
             </a>
         </div>
 
         <div class="col-3 align-self-center text-center">
-            <a href="#">
-                <i style="font-size: 80px;
-                <?php if ($sysinfo['body']['rooms'][3]['configuration']['operationMode'] == "OFF"){echo "color:gray;";}?>
-                        " class="fas fa-keyboard"></i>
-                <h3><?= $sysinfo['body']['rooms'][3]['configuration']['currentTemperature']; ?>&deg;C</h3>
+            <a href="#" style="<?php iconColor($devices[3]['operationMode']); ?>">
+                <i style="font-size: 80px;" class="fas fa-keyboard"></i>
+                <h3>Desk</h3>
+                <h3><?php echo $devices[3]["currentTemperature"]." / ".$devices[3]["temperatureSetpoint"]?>&deg;C</h3>
             </a>
         </div>
 
@@ -82,34 +90,38 @@
     <div class="row" style="height: 200px">
 
         <div class="col-3 align-self-center text-center" style="">
+            <a href="#" style="<?php iconColor($devices[4]['operationMode']); ?>">
+                <i style="font-size: 80px;" class="fas fa-bath"></i>
+                <h3>Bath room</h3>
+                <h3><?php echo $devices[4]["currentTemperature"]." / ".$devices[4]["temperatureSetpoint"]?>&deg;C</h3>
+            </a>
+        </div>
+
+        <div class="col-3 align-self-center text-center" style="">
             <a href="#">
-                <i style="font-size: 80px;
-                <?php if ($sysinfo['body']['rooms'][4]['configuration']['operationMode'] == "OFF"){echo "color:gray;";}?>"
-                   class="fas fa-bath"></i>
-                <h3><?= $sysinfo['body']['rooms'][4]['configuration']['currentTemperature']; ?>&deg;C</h3>
+                <i style="font-size: 80px;" class="fas fa-bed"></i>
+                <h3>Julie room</h3>
+                <h3><?php ?>&deg;C</h3>
             </a>
         </div>
-        <!--
-        <div class="col-3 align-self-center text-center">
-            <a href="../SwitchLight/?IP=192.168.178.153&PORT=2&STATUS=ON&FROM=UpstairsLight&LIGHT=Desk">
-                <i style="font-size: 80px; " class="fas fa-keyboard"></i>
-                <h3>Desk</h3>
+
+        <div class="col-3 align-self-center text-center" style="">
+            <a href="#">
+                <i style="font-size: 80px;" class="fas fa-suitcase"></i>
+                <h3>Guest room</h3>
+                <h3><?php ?>&deg;C</h3>
             </a>
         </div>
-        <div class="col-3 align-self-center text-center">
-            <a href="../SwitchLight/?IP=192.168.178.153&PORT=3&STATUS=ON&FROM=UpstairsLight&LIGHT=Master%20bedroom">
-                <i style="font-size: 80px; " class="fas fa-bed"></i>
+
+        <div class="col-3 align-self-center text-center" style="">
+            <a href="#">
+                <i style="font-size: 80px;" class="fas fa-bed"></i>
                 <h3>Master bedroom</h3>
+                <h3><?php ?>&deg;C</h3>
             </a>
         </div>
-        <div class="col-3 align-self-center text-center">
-            <a href="../SwitchLight/?IP=192.168.178.153&PORT=4&STATUS=ON&FROM=UpstairsLight&LIGHT=Dressing">
-                <i style="font-size: 80px; " class="fas fa-tshirt"></i>
-                <h3>Dressing</h3>
-            </a>
-        </div>
-        -->
     </div>
+
 </div>
 
 </body>
