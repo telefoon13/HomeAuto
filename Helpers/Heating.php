@@ -12,22 +12,24 @@ class Heating
 {
     var $baseURL = "https://smart.vaillant.com/mobile/api/v4/";
 
-    public static function login(){
-        $smartphoneId = "HomeAutoMike1";
-        $username = "mikedhoore";
-        $password = "******";
-        $token = (new self)->GetNewToken($smartphoneId,$username,$password);
-        (new self)->GetCookiesWithToken($smartphoneId,$username,$token);
-    }
-
     public static function getMainSystemInfo(){
         $getSystemInfoURL = (new self)->baseURL . "facilities";
+
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
         curl_setopt ($ch, CURLOPT_URL, $getSystemInfoURL);
         curl_setopt ($ch, CURLOPT_COOKIEFILE, '/tmp/Vaillant_cookie.txt');
         $return = curl_exec($ch);
+        $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        (new self)->debug_to_console($httpcode);
+        if($httpcode != "200"){
+            (new self)->debug_to_console('not 200');
+            (new self)->login();
+            $return = curl_exec($ch);
+            $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        (new self)->debug_to_console($httpcode);
+        }
         curl_close ($ch);
         $values = json_decode($return,true);
         $sysInfoArray = array(
@@ -53,16 +55,46 @@ class Heating
         curl_setopt ($ch, CURLOPT_URL, $getDevicesURL);
         curl_setopt ($ch, CURLOPT_COOKIEFILE, '/tmp/Vaillant_cookie.txt');
         $return = curl_exec($ch);
+        //$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close ($ch);
         $values = json_decode($return,true);
+        //(new self)->logout();
         return $values;
+
     }
 
 
+    function debug_to_console( $data ) {
+        $output = $data;
+        if ( is_array( $output ) )
+            $output = implode( ',', $output);
+
+        echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
+    }
 
 
+    private function login(){
+        $smartphoneId = "HomeAutoMike1";
+        $username = "mikedhoore";
+        $password = "****";
+        $token =  self::GetNewToken($smartphoneId,$username,$password);
+        self::GetCookiesWithToken($smartphoneId,$username,$token);
+    }
 
-
+    private function logout(){
+        $logOutURL = $this->baseURL . "account/authentication/v1/logout";
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt ($ch, CURLOPT_POST, true);
+        curl_setopt ($ch, CURLOPT_URL, $logOutURL);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+        curl_setopt($ch, CURLOPT_COOKIEFILE, '/tmp/Vaillant_cookie.txt');
+        curl_exec($ch);
+        $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close ($ch);
+        unlink("/tmp/Vaillant_cookie.txt");
+        $this->debug_to_console('logout'.$httpcode);
+    }
 
     //Function to get a token from Vaillant API
     private function GetNewToken($smartphoneId,$username,$password){

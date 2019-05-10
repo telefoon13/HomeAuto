@@ -36,11 +36,8 @@
 
     <?php
     include_once ("../Helpers/Heating.php");
+
     $sysinfo = Heating::getAllDevices();
-    //echo $sysinfo['body']['rooms'][0]['configuration']['name'];
-    /*foreach ($sysinfo['body']['rooms'] as $device){
-        echo $device['configuration']['name'];
-    }*/
     ?>
     <div class="row" style="height: 200px">
 
