@@ -226,6 +226,43 @@ class Vaillant
         return $call[0];
     }
 
+    public static function setManualTempValve($roomID, $temp){
+        //Check if isLogged in and else login
+        if (!self::isLoggedIn()) {
+            self::login();
+        }
+        //Body to send in PUT
+        $body = array(
+            "temperatureSetpoint" => $temp
+        );
+        //Encode body in JSON
+        $bodyJSON = json_encode($body,JSON_NUMERIC_CHECK);
+        $serialNumber = self::getMainSystemInfo()["serialNumber"];
+        //Complete URL
+        $callsetManualTempValve = (new self)->baseURL . "facilities/".$serialNumber."/rbr/v1/rooms/".$roomID."/configuration/temperatureSetpoint";
+        //Do the call
+        $call = self::cUrl($callsetManualTempValve, "PUT", $bodyJSON);
+        return $call[0];
+    }
+
+    public static function changechildLock($roomID, $childLock){
+        //Check if isLogged in and else login
+        if (!self::isLoggedIn()) {
+            self::login();
+        }
+        //Body to send in PUT
+        $body = array(
+            "childLock" => $childLock
+        );
+        //Encode body in JSON
+        $bodyJSON = json_encode($body);
+        $serialNumber = self::getMainSystemInfo()["serialNumber"];
+        //Complete URL
+        $callchangechildLock = (new self)->baseURL . "facilities/".$serialNumber."/rbr/v1/rooms/".$roomID."/configuration/childLock";
+        //Do the call
+        $call = self::cUrl($callchangechildLock, "PUT", $bodyJSON);
+        return $call[0];
+    }
 
       //------------------------------------//
      //         Universal functions        //

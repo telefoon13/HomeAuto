@@ -18,6 +18,7 @@
     $mode = $_GET["mode"];
     $temp = $_GET["temp"];
     $time = $_GET["time"];
+    $childLock = $_GET["childLock"];
     $message = "Something went wrong !!";
 
     if ($mode == 1 || $mode == 2){
@@ -31,12 +32,33 @@
             $message = "Valve changed to ".$modeFull;
         }
     }elseif ($mode == 3){
-        $code = Vaillant::setBoostToValve($roomID,$temp,$time);
-        if ($code == "200"){
-            $message = "Boost set to ".$temp."°C for ".$time."min";
+        $code1 = Vaillant::changeOperationMode($roomID,"AUTO");
+        if ($code1 == "200"){
+            $code2 = Vaillant::setBoostToValve($roomID,$temp,$time);
+            if ($code2 == "200"){
+                $message = "Boost set to ".$temp."°C for ".$time."min";
+            }
         }
     }elseif ($mode == 4){
-        $modeFull = "MANUAL";
+        $code1 = Vaillant::changeOperationMode($roomID,"MANUAL");
+        if ($code1 == "200"){
+            $code2 = Vaillant::setManualTempValve($roomID,$temp);
+            if ($code2 == "200"){
+                $message = "Valve changed to MANUAL with ".$temp."°C";
+            }
+        }
+    }elseif ($mode == 5){
+        if($childLock == 1){
+            $setChildLockTo = false;
+            $lock = "unlocked";
+        } elseif ($childLock == 0){
+            $setChildLockTo = true;
+            $lock = "locked";
+        }
+        $code = Vaillant::changechildLock($roomID,$setChildLockTo);
+        if ($code == "200"){
+            $message = "Child lock changed to ".$lock;
+        }
     }
     ?>
 <div class="container-fluid">

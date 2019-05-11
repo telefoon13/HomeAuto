@@ -71,7 +71,7 @@
 
     <div class="row" style="height: 133px">
         <div class="col-3 align-self-center text-right">
-            <h3><i class="fas fa-<?php
+            <h3><a href="change.php?room=<?= $device['roomIndex']; ?>&mode=5&childLock=<?= $device['childLock']; ?>"> <i class="fas fa-<?php
              if($device['childLock']){
                 echo "lock";
              }elseif (!$device['childLock']){
@@ -79,7 +79,7 @@
              }else{
                  echo "question";
              }
-            ?>"> Child lock</i></h3>
+            ?>"> Child lock</i></a></h3>
         </div>
         <div class="col-3 align-self-center text-left">
             <h3><i class="fas fa-<?php
