@@ -49,90 +49,48 @@
                 break;
         }
     }
-    ?>
 
-    <div class="row" style="height: 200px">
-
+    function showValve($id){
+        global $devices;
+        ?>
         <div class="col-3 align-self-center text-center">
             <?php
             $beginMelding = "<div class=\"meldingValve\"><i class=\"fas fa-";
             $eindMelding = "\"></i></div>";
-            if($devices[0]["isWindowOpen"]){
+            if($devices[$id]["isWindowOpen"]){
                 echo $beginMelding."wind".$eindMelding;
-            }elseif($devices[0]["isBatteryLow"]){
+            }elseif($devices[$id]["isBatteryLow"]){
                 echo $beginMelding."battery-quarter".$eindMelding;
-            }elseif($devices[0]["isRadioOutOfReach"]){
+            }elseif($devices[$id]["isRadioOutOfReach"]){
                 echo $beginMelding."signal".$eindMelding;
-            }elseif ($devices[0]["remainingQuickVeto"] != null){
+            }elseif ($devices[$id]["remainingQuickVeto"] != null){
                 echo $beginMelding."clock".$eindMelding;
             }
             ?>
-            <a href="Valve/?room=0" style="<?php iconColor($devices[0]['operationMode']); ?>">
-                <i style="font-size: 80px;" class="fas fa-<?php echo $devices[0]["icon"]; ?>"></i>
-                <h3><?php echo $devices[0]["name"]; ?></h3>
-                <h3><?php echo $devices[0]["currentTemperature"]." / ".$devices[0]["temperatureSetpoint"]?>&deg;C</h3>
+            <a href="Valve/?room=<?php echo $devices[$id]["roomIndex"]; ?>" style="<?php iconColor($devices[$id]['operationMode']); ?>">
+                <i style="font-size: 80px;" class="fas fa-<?php echo $devices[$id]["icon"]; ?>"></i>
+                <h3><?php echo $devices[$id]["name"]; ?></h3>
+                <h3><?php echo $devices[$id]["currentTemperature"]." / ".$devices[$id]["temperatureSetpoint"]?>&deg;C</h3>
             </a>
         </div>
+    <?php
+    }
+    ?>
 
-        <div class="col-3 align-self-center text-center">
-            <a href="Valve/?room=1" style="<?php iconColor($devices[1]['operationMode']); ?>">
-                <i style="font-size: 80px;" class="fas fa-utensil-spoon"></i>
-                <h3><?php echo $devices[1]["name"]; ?></h3>
-                <h3><?php echo $devices[1]["currentTemperature"]." / ".$devices[1]["temperatureSetpoint"]?>&deg;C</h3>
-            </a>
-        </div>
-
-        <div class="col-3 align-self-center text-center">
-            <a href="Valve/?room=2" style="<?php iconColor($devices[2]['operationMode']); ?>">
-                <i style="font-size: 80px;" class="fas fa-utensils"></i>
-                <h3><?php echo $devices[2]["name"]; ?></h3>
-                <h3><?php echo $devices[2]["currentTemperature"]." / ".$devices[2]["temperatureSetpoint"]?>&deg;C</h3>
-            </a>
-        </div>
-
-        <div class="col-3 align-self-center text-center">
-            <a href="Valve/?room=3" style="<?php iconColor($devices[3]['operationMode']); ?>">
-                <i style="font-size: 80px;" class="fas fa-keyboard"></i>
-                <h3><?php echo $devices[3]["name"]; ?></h3>
-                <h3><?php echo $devices[3]["currentTemperature"]." / ".$devices[3]["temperatureSetpoint"]?>&deg;C</h3>
-            </a>
-        </div>
-
+    <div class="row" style="height: 200px">
+        <?php
+        for ($i = 0; $i <= 3; $i++){
+            showValve($i);
+        }
+        ?>
     </div>
 
     <div class="row" style="height: 200px">
-
-        <div class="col-3 align-self-center text-center" style="">
-            <a href="Valve/?room=4" style="<?php iconColor($devices[4]['operationMode']); ?>">
-                <i style="font-size: 80px;" class="fas fa-bath"></i>
-                <h3><?php echo $devices[4]["name"]; ?></h3>
-                <h3><?php echo $devices[4]["currentTemperature"]." / ".$devices[4]["temperatureSetpoint"]?>&deg;C</h3>
-            </a>
-        </div>
-
-        <div class="col-3 align-self-center text-center" style="">
-            <a href="Valve/?room=5">
-                <i style="font-size: 80px;" class="fas fa-bed"></i>
-                <h3>Julie room</h3>
-                <h3><?php ?>&deg;C</h3>
-            </a>
-        </div>
-
-        <div class="col-3 align-self-center text-center" style="">
-            <a href="Valve/?room=6">
-                <i style="font-size: 80px;" class="fas fa-suitcase"></i>
-                <h3>Guest room</h3>
-                <h3><?php ?>&deg;C</h3>
-            </a>
-        </div>
-
-        <div class="col-3 align-self-center text-center valve" style="">
-            <a href="Valve/?room=7">
-                <i style="font-size: 80px;" class="fas fa-bed"></i>
-                <h3>Master bedroom</h3>
-                <h3><?php ?>&deg;C</h3>
-            </a>
-        </div>
+        <?php
+        for ($i = 4; $i <= 7; $i++){
+            showValve($i);
+        }
+        ?>
     </div>
 
 </div>
