@@ -118,6 +118,30 @@ class Vaillant
         }
     }
 
+    public static function getMainSystemInfo2(){
+        //Check if isLogged in and else login
+        if (!self::isLoggedIn()){
+            self::login();
+        }
+        $serialNumber = self::getMainSystemInfo()["serialNumber"];
+        //Complete URL
+        $getSystemInfo2 = (new self)->baseURL . "facilities/".$serialNumber."/system/v1/details";
+        //Do the call
+        $call = self::cUrl($getSystemInfo2, "GET", null);
+        //Only return the data if HTTP code equals 200 else return HTTP code
+        if ($call[0] == "200"){
+            $values = $call[1];
+            $sysInfoArray = array(
+                "facilityName"=>$values['body']['facilityDetails']['facilityName'],
+                "facilityTime"=>$values['body']['facilityDetails']['facilityTime'],
+                "facilityTimeZone"=>$values['body']['facilityDetails']['facilityTimeZone']
+            );
+            return $sysInfoArray;
+        } else {
+            return $call[0];
+        }
+    }
+
       //------------------------------------//
      //           Device functions         //
     //------------------------------------//
@@ -303,7 +327,7 @@ class Vaillant
         $httpCode = curl_getinfo($cUrl, CURLINFO_HTTP_CODE);
         //The return
         $cUrlReturn = json_decode($cUrlReturn,true);
-        Debugger::debug_to_console($url.$method.$body.$httpCode);
+        //Debugger::debug_to_console($url.$method.$body.$httpCode);
 
         return array($httpCode,$cUrlReturn);
     }

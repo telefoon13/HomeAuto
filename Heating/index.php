@@ -27,7 +27,7 @@
             <script type="text/javascript">window.onload = date_time('date_time');</script>
         </div>
         <div class="col-3 align-self-center text-center">
-            <a href="#">
+            <a href="options.php">
                 <i style="font-size: 80px;" class="fas fa-toolbox"></i>
                 <h3>Info & Options</h3>
             </a>
