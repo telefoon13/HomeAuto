@@ -7,7 +7,7 @@ class Vaillant
     private $baseURL = "https://smart.vaillant.com/mobile/api/v4/";
     private $smartphoneId = "HomeAutoMike1";
     private $username = "mikedhoore";
-    private $password = "***";
+    private $password = "****";
     private $CookieJar = "/tmp/Vaillant_cookie.txt";
 
 
@@ -141,11 +141,40 @@ class Vaillant
                     "childLock"=>$value["configuration"]["childLock"],
                     "isWindowOpen"=>$value["configuration"]["isWindowOpen"],
                     "isBatteryLow"=>$value["configuration"]["devices"][0]["isBatteryLow"],
-                    "isRadioOutOfReach"=>$value["configuration"]["devices"][0]["isRadioOutOfReach"],
+                    "isRadioOutOfReach"=>$value["configuration"]["devices"][0]["isRadioOutOfReach"]
                 );
                 $rooms[$device["roomIndex"]] = $device;
             }
             return $rooms;
+        } else {
+            return $call[0];
+        }
+    }
+
+    public static function getOneDevice($roomID){
+        //Check if isLogged in and else login
+        if (!self::isLoggedIn()) {
+            self::login();
+        }
+        $serialNumber = self::getMainSystemInfo()["serialNumber"];
+        //Complete URL
+        $getOneDevice = (new self)->baseURL . "facilities/".$serialNumber."/rbr/v1/rooms/".$roomID;
+        //Do the call
+        $call = self::cUrl($getOneDevice, "GET", null);
+        if ($call[0] == "200"){
+                $device = array(
+                    "roomIndex"=>$call[1]["body"]["roomIndex"],
+                    "name"=>$call[1]["body"]["configuration"]["name"],
+                    "temperatureSetpoint"=>$call[1]["body"]["configuration"]["temperatureSetpoint"],
+                    "operationMode"=>$call[1]["body"]["configuration"]["operationMode"],
+                    "currentTemperature"=>$call[1]["body"]["configuration"]["currentTemperature"],
+                    "childLock"=>$call[1]["body"]["configuration"]["childLock"],
+                    "isWindowOpen"=>$call[1]["body"]["configuration"]["isWindowOpen"],
+                    "isBatteryLow"=>$call[1]["body"]["configuration"]["devices"][0]["isBatteryLow"],
+                    "isRadioOutOfReach"=>$call[1]["body"]["configuration"]["devices"][0]["isRadioOutOfReach"],
+                    "remainingQuickVeto"=>$call[1]["body"]["configuration"]["quickVeto"]["remainingDuration"]
+                );
+            return $device;
         } else {
             return $call[0];
         }

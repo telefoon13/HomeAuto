@@ -54,9 +54,9 @@
     <div class="row" style="height: 200px">
 
         <div class="col-3 align-self-center text-center">
-            <a href="valve/?room=0" <?php iconColor($devices[0]['operationMode']); ?>>
+            <a href="Valve/?room=0" <?php iconColor($devices[0]['operationMode']); ?>>
                 <i style="font-size: 80px;" class="fas fa-couch"></i>
-                <h3>Living room</h3>
+                <h3><?php echo $devices[0]["name"]; ?></h3>
                 <h3><?php echo $devices[0]["currentTemperature"]." / ".$devices[0]["temperatureSetpoint"]?>&deg;C</h3>
             </a>
         </div>
@@ -64,7 +64,7 @@
         <div class="col-3 align-self-center text-center">
             <a href="#" style="<?php iconColor($devices[1]['operationMode']); ?>">
                 <i style="font-size: 80px;" class="fas fa-utensil-spoon"></i>
-                <h3>Kitchen</h3>
+                <h3><?php echo $devices[1]["name"]; ?></h3>
                 <h3><?php echo $devices[1]["currentTemperature"]." / ".$devices[1]["temperatureSetpoint"]?>&deg;C</h3>
             </a>
         </div>
@@ -72,7 +72,7 @@
         <div class="col-3 align-self-center text-center">
             <a href="#" style="<?php iconColor($devices[2]['operationMode']); ?>">
                 <i style="font-size: 80px;" class="fas fa-utensils"></i>
-                <h3>Dinner room</h3>
+                <h3><?php echo $devices[2]["name"]; ?></h3>
                 <h3><?php echo $devices[2]["currentTemperature"]." / ".$devices[2]["temperatureSetpoint"]?>&deg;C</h3>
             </a>
         </div>
@@ -80,7 +80,7 @@
         <div class="col-3 align-self-center text-center">
             <a href="#" style="<?php iconColor($devices[3]['operationMode']); ?>">
                 <i style="font-size: 80px;" class="fas fa-keyboard"></i>
-                <h3>Desk</h3>
+                <h3><?php echo $devices[3]["name"]; ?></h3>
                 <h3><?php echo $devices[3]["currentTemperature"]." / ".$devices[3]["temperatureSetpoint"]?>&deg;C</h3>
             </a>
         </div>
@@ -92,7 +92,7 @@
         <div class="col-3 align-self-center text-center" style="">
             <a href="#" style="<?php iconColor($devices[4]['operationMode']); ?>">
                 <i style="font-size: 80px;" class="fas fa-bath"></i>
-                <h3>Bath room</h3>
+                <h3><?php echo $devices[4]["name"]; ?></h3>
                 <h3><?php echo $devices[4]["currentTemperature"]." / ".$devices[4]["temperatureSetpoint"]?>&deg;C</h3>
             </a>
         </div>
