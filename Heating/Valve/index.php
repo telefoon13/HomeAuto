@@ -17,17 +17,6 @@
     include_once ("../../Helpers/Vaillant.php");
 
     $device = Vaillant::getOneDevice($_GET["room"]);
-    $icons = array(
-        "0"=>"couch",
-        "1"=>"utensil-spoon",
-        "2"=>"utensils",
-        "3"=>"keyboard",
-        "4"=>"bath",
-        "5"=>"bed",
-        "6"=>"suitcase",
-        "7"=>"bed",
-    );
-    //echo var_dump($device);
     ?>
 
 <div class="container-fluid">
@@ -53,7 +42,7 @@
 
     <div class="row" style="height: 133px">
         <div class="col-3 align-self-center text-right">
-            <i style="font-size: 80px;" class="fas fa-<?php echo $icons[$device['roomIndex']]; ?>"></i>
+            <i style="font-size: 80px;" class="fas fa-<?php echo $device['icon']; ?>"></i>
         </div>
 
         <div class="col-3 align-self-center text-left">

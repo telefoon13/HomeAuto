@@ -141,7 +141,9 @@ class Vaillant
                     "childLock"=>$value["configuration"]["childLock"],
                     "isWindowOpen"=>$value["configuration"]["isWindowOpen"],
                     "isBatteryLow"=>$value["configuration"]["devices"][0]["isBatteryLow"],
-                    "isRadioOutOfReach"=>$value["configuration"]["devices"][0]["isRadioOutOfReach"]
+                    "isRadioOutOfReach"=>$value["configuration"]["devices"][0]["isRadioOutOfReach"],
+                    "remainingQuickVeto"=>$value["configuration"]["quickVeto"]["remainingDuration"],
+                    "icon"=>self::iconForValve($value["roomIndex"])
                 );
                 $rooms[$device["roomIndex"]] = $device;
             }
@@ -172,7 +174,8 @@ class Vaillant
                     "isWindowOpen"=>$call[1]["body"]["configuration"]["isWindowOpen"],
                     "isBatteryLow"=>$call[1]["body"]["configuration"]["devices"][0]["isBatteryLow"],
                     "isRadioOutOfReach"=>$call[1]["body"]["configuration"]["devices"][0]["isRadioOutOfReach"],
-                    "remainingQuickVeto"=>$call[1]["body"]["configuration"]["quickVeto"]["remainingDuration"]
+                    "remainingQuickVeto"=>$call[1]["body"]["configuration"]["quickVeto"]["remainingDuration"],
+                    "icon"=>self::iconForValve($call[1]["body"]["roomIndex"])
                 );
             return $device;
         } else {
@@ -223,6 +226,20 @@ class Vaillant
         //Debugger::debug_to_console($url.$method.$body.$httpCode);
 
         return array($httpCode,$cUrlReturn);
+    }
+
+    private static function iconForValve($id){
+        $icons = array(
+            "0"=>"couch",
+            "1"=>"utensil-spoon",
+            "2"=>"utensils",
+            "3"=>"keyboard",
+            "4"=>"bath",
+            "5"=>"bed",
+            "6"=>"suitcase",
+            "7"=>"bed",
+        );
+        return $icons[$id];
     }
 
 }
