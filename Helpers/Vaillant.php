@@ -118,6 +118,10 @@ class Vaillant
         }
     }
 
+      //------------------------------------//
+     //           Device functions         //
+    //------------------------------------//
+
     public static function getAllDevices(){
         //Check if isLogged in and else login
         if (!self::isLoggedIn()) {
@@ -183,6 +187,45 @@ class Vaillant
         }
     }
 
+    public static function changeOperationMode($roomID, $operationMode){
+        //Check if isLogged in and else login
+        if (!self::isLoggedIn()) {
+            self::login();
+        }
+        //Body to send in PUT
+        $body = array(
+            "operationMode" => $operationMode
+        );
+        //Encode body in JSON
+        $bodyJSON = json_encode($body);
+        $serialNumber = self::getMainSystemInfo()["serialNumber"];
+        //Complete URL
+        $callChangeOperationMode = (new self)->baseURL . "facilities/".$serialNumber."/rbr/v1/rooms/".$roomID."/configuration/operationMode";
+        //Do the call
+        $call = self::cUrl($callChangeOperationMode, "PUT", $bodyJSON);
+        return $call[0];
+    }
+
+    public static function setBoostToValve($roomID, $temp, $time){
+        //Check if isLogged in and else login
+        if (!self::isLoggedIn()) {
+            self::login();
+        }
+        //Body to send in PUT
+        $body = array(
+            "temperatureSetpoint" => $temp,
+            "duration"=> $time
+        );
+        //Encode body in JSON
+        $bodyJSON = json_encode($body,JSON_NUMERIC_CHECK);
+        $serialNumber = self::getMainSystemInfo()["serialNumber"];
+        //Complete URL
+        $callsetBoostToValve = (new self)->baseURL . "facilities/".$serialNumber."/rbr/v1/rooms/".$roomID."/configuration/quickVeto";
+        //Do the call
+        $call = self::cUrl($callsetBoostToValve, "PUT", $bodyJSON);
+        return $call[0];
+    }
+
 
       //------------------------------------//
      //         Universal functions        //
@@ -203,7 +246,7 @@ class Vaillant
                 curl_setopt($cUrl, CURLOPT_POSTFIELDS, $body);
                 break;
             case "PUT":
-                curl_setopt($cUrl, CURLOPT_PUT, true);
+                curl_setopt($cUrl, CURLOPT_CUSTOMREQUEST, $method);
                 curl_setopt($cUrl, CURLOPT_POSTFIELDS, $body);
                 break;
             case "DELETE":
@@ -223,7 +266,7 @@ class Vaillant
         $httpCode = curl_getinfo($cUrl, CURLINFO_HTTP_CODE);
         //The return
         $cUrlReturn = json_decode($cUrlReturn,true);
-        //Debugger::debug_to_console($url.$method.$body.$httpCode);
+        Debugger::debug_to_console($url.$method.$body.$httpCode);
 
         return array($httpCode,$cUrlReturn);
     }

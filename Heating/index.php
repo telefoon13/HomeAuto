@@ -87,7 +87,7 @@
 
     <div class="row" style="height: 200px">
         <?php
-        for ($i = 4; $i <= 7; $i++){
+        for ($i = 4; $i <= 4; $i++){
             showValve($i);
         }
         ?>

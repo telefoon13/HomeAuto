@@ -76,7 +76,7 @@ $(document).ready(function () {
     function updateURL(){
         var roomID = document.getElementById("roomID").value;
         var mode = document.getElementById("myRange").value;
-        $('#confirm').attr("href", "?room="+roomID+"&mode="+mode+"&temp="+temp+"&time="+time);
+        $('#confirm').attr("href", "change.php?room="+roomID+"&mode="+mode+"&temp="+temp+"&time="+time);
     }
 
     $('.plusTemp').on("click", function (e) {
