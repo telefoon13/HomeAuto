@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: #02529F;
+    background-color: azure;
+    height:100%;
+}
+
+a{
+    color: #02529F;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #02529F;
+    text-decoration: none;
+}
+
+.container-fluid{
+
+}
+
+.row{
+ height: 150px;
+}
+
+.col-sm-2, .col-sm-4{
+    text-align: center;
+}

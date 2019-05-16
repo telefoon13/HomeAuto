@@ -2,10 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f703fa8-d3c5-4b05-b1fb-5656f2051e39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Heating/options.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/logo.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/cloud.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/cloudy-night.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/cloudy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/lightning-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/lightning.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/moon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/rain-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/rain-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/rain-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/rain.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/snow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/snowflake.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/snowing-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/snowing.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/storm.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/sun.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/thermometer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/wind-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/wind.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/weather/windy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/js/jquery-3.4.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/js/jquery-3.4.1.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Heating/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Heating/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helpers/Vaillant.php" beforeDir="false" afterPath="$PROJECT_DIR$/Helpers/Vaillant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,117 +64,32 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Heating/index.php">
+        <entry file="file://$PROJECT_DIR$/V1/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-400">
-              <caret line="29" column="32" selection-end-line="98" selection-end-column="7" />
+            <state relative-caret-position="119">
+              <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
               <folding>
-                <element signature="n#style#0;n#i#0;n#a#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Heating/options.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#768#773#0#HTML" expanded="true" />
+                <element signature="e#804#809#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Helpers/Vaillant.php">
+        <entry file="file://$PROJECT_DIR$/V1/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="292" column="44" lean-forward="true" selection-start-line="292" selection-start-column="44" selection-end-line="292" selection-end-column="44" />
+            <state relative-caret-position="459">
+              <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Heating/Valve/index.php">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="28" selection-end-column="14" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#a#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#3024#3030#0#HTML" expanded="true" />
-                <element signature="e#3030#3036#0#HTML" expanded="true" />
-                <element signature="e#3042#3048#0#HTML" expanded="true" />
-                <element signature="e#3048#3054#0#HTML" expanded="true" />
-                <element signature="e#3054#3060#0#HTML" expanded="true" />
-                <element signature="e#3067#3073#0#HTML" expanded="true" />
-                <element signature="e#3073#3079#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Heating/Valve/change.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="29" lean-forward="true" selection-end-line="94" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/SetValve.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="78" column="46" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="807">
-              <caret line="66" column="1" lean-forward="true" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DownstairsLight/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="52" column="31" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UpstairsLight/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="40" column="25" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SwitchLight/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            <state relative-caret-position="357">
+              <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -142,12 +100,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>id</find>
+      <find>align-self-center text-center</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -163,7 +123,6 @@
         <option value="$PROJECT_DIR$/PowerUsages/index.php" />
         <option value="$PROJECT_DIR$/DownstairsLight/index.php" />
         <option value="$PROJECT_DIR$/Cell/DownstairsLight/index.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Helpers/Debugger.php" />
         <option value="$PROJECT_DIR$/Helpers/Heating.php" />
         <option value="$PROJECT_DIR$/css.css" />
@@ -173,12 +132,15 @@
         <option value="$PROJECT_DIR$/Heating/Valve/change.php" />
         <option value="$PROJECT_DIR$/Heating/index.php" />
         <option value="$PROJECT_DIR$/Heating/options.php" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Helpers/Vaillant.php" />
+        <option value="$PROJECT_DIR$/V1/index.php" />
+        <option value="$PROJECT_DIR$/V1/css/main.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -199,17 +161,7 @@
             <path>
               <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
               <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
-              <item name="Heating" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
               <item name="Helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -222,10 +174,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="W:\mikedhoore.be\HomeAuto\V1\img\weather" />
+      <recent name="W:\mikedhoore.be\HomeAuto\V1\img" />
+      <recent name="W:\mikedhoore.be\HomeAuto\V1\js" />
+      <recent name="W:\mikedhoore.be\HomeAuto\V1\css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="W:\mikedhoore.be\HomeAuto\Heating" />
     </key>
@@ -260,7 +220,8 @@
       <workItem from="1557168309139" duration="11274000" />
       <workItem from="1557485106681" duration="25000" />
       <workItem from="1557485469176" duration="1040000" />
-      <workItem from="1557486528372" duration="49915000" />
+      <workItem from="1557486528372" duration="50469000" />
+      <workItem from="1558029847501" duration="5435000" />
     </task>
     <task id="LOCAL-00001" summary="Insert of Downstairs couch light&#10;+ Functioning login in Vaillant API">
       <created>1557168129569</created>
@@ -280,14 +241,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80618000" />
+    <option name="totallyTimeSpent" value="86607000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16311301" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16471216" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
@@ -355,13 +316,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="28" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Helpers/GetPOW.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -383,34 +337,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Helpers/Heating.php">
+    <entry file="file://$PROJECT_DIR$/Helpers/Heating.php" />
+    <entry file="file://$PROJECT_DIR$/Heating/Valve.php" />
+    <entry file="file://$PROJECT_DIR$/Heating/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-655">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="46" selection-end-column="29" />
+        <state relative-caret-position="493">
+          <caret line="29" column="32" selection-end-line="98" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Heating/options.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Heating/Valve/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="28" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Heating/Valve/change.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="29" selection-end-line="94" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/SetValve.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="78" column="46" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DownstairsLight/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
+        <state relative-caret-position="884">
           <caret line="52" column="31" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UpstairsLight/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
+        <state relative-caret-position="680">
           <caret line="40" column="25" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Heating/Valve.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="807">
-          <caret line="66" column="1" lean-forward="true" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -421,71 +395,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/SetValve.js">
+    <entry file="file://$PROJECT_DIR$/css.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="78" column="46" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Heating/Valve/change.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="29" lean-forward="true" selection-end-line="94" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Heating/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-400">
-          <caret line="29" column="32" selection-end-line="98" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#a#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Heating/Valve/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="28" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#3024#3030#0#HTML" expanded="true" />
-            <element signature="e#3030#3036#0#HTML" expanded="true" />
-            <element signature="e#3042#3048#0#HTML" expanded="true" />
-            <element signature="e#3048#3054#0#HTML" expanded="true" />
-            <element signature="e#3054#3060#0#HTML" expanded="true" />
-            <element signature="e#3067#3073#0#HTML" expanded="true" />
-            <element signature="e#3073#3079#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Heating/options.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state>
+          <caret selection-end-line="15" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Helpers/Vaillant.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="292" column="44" lean-forward="true" selection-start-line="292" selection-start-column="44" selection-end-line="292" selection-end-column="44" />
+        <state relative-caret-position="153">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="7119" column="1" selection-start-line="7119" selection-start-column="1" selection-end-line="7119" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/img/weather/rain-1.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/img/weather/rain-2.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/img/weather/rain-3.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/img/weather/cloudy-night.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/img/weather/cloudy.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/img/weather/cloud.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding>
+            <element signature="e#768#773#0#HTML" expanded="true" />
+            <element signature="e#804#809#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
         </state>
       </provider>
     </entry>
