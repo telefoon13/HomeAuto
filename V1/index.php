@@ -9,6 +9,7 @@
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/timeanddate.js"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -17,12 +18,12 @@
 
         </div>
         <div class="d-none d-sm-block col-sm-4 align-self-center" id="R1C2">
-            <h1>15:00</h1>
-            <h2>15 mei 2019</h2>
+            <span id="date_time"></span>
+            <script type="text/javascript">window.onload = date_time('date_time');</script>
         </div>
         <div class="d-none d-sm-block col-sm-2 align-self-center text-right" id="R1C3">
-            <h3>IN : 20&deg;C</h3>
-            <h3>OUT : 13&deg;C</h3>
+            <h4>IN : 20&deg;C</h4>
+            <h4>OUT : 13&deg;C</h4>
         </div>
         <div class="d-none d-sm-block col-sm-2 align-self-center" id="R1C4">
             <img alt="Sun" src="img/weather/sun.svg" width="100px" height="100px">
@@ -45,6 +46,7 @@
         <div class="col-sm-2 col-6 align-self-center" id="R3C5">P</div>
         <div class="col-sm-2 col-6 align-self-center" id="R3C6">Q</div>
     </div>
+    <!--
     <div class="row" id="R4">
         <div class="col-sm-2 col-6 align-self-center" id="R4C1">R</div>
         <div class="col-sm-2 col-6 align-self-center" id="R4C2">S</div>
@@ -53,6 +55,7 @@
         <div class="col-sm-2 col-6 align-self-center" id="R4C5">V</div>
         <div class="col-sm-2 col-6 align-self-center" id="R4C6">W</div>
     </div>
+    -->
 </div>
 </body>
 </html>

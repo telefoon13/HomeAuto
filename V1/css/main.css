@@ -3,7 +3,6 @@ body{
     padding: 0;
     color: #02529F;
     background-color: azure;
-    height:100%;
 }
 
 a{
@@ -21,13 +20,14 @@ a:hover{
 }
 
 .row{
- height: 150px;
+    height: 200px;
 }
 
 .col-sm-2, .col-sm-4{
     text-align: center;
+    #min-height: 150px;
 }
 
-h1, h2, h3{
+h1, h2, h3, h4{
     font-weight: bold;
 }
