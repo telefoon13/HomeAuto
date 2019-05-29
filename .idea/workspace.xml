@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f703fa8-d3c5-4b05-b1fb-5656f2051e39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/V1/switchlight.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/upStairs/Masterbedroom.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/upStairs/bed.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/upStairs/bedSimple.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/upStairs/desk.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/upStairs/dressing.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/upStairs/mirror.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/upStairs/shower.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/img/upStairs/stairs.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/upstairLights.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/V1/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/V1/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/V1/img/light.svg" beforeDir="false" afterPath="$PROJECT_DIR$/V1/img/light.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/V1/php/MainHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/V1/php/MainHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/V1/switchlight.php" beforeDir="false" afterPath="$PROJECT_DIR$/V1/switchlight.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/V1/downstairLights.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="69" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="69" />
+            <state relative-caret-position="336">
+              <caret line="14" column="62" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="62" />
               <folding>
                 <element signature="e#1016#1022#0#HTML" expanded="true" />
                 <element signature="e#1115#1121#0#HTML" expanded="true" />
@@ -63,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/V1/switchlight.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            <state relative-caret-position="216">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -87,13 +93,37 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/V1/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/V1/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="51" column="30" lean-forward="true" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+            <state relative-caret-position="348">
+              <caret line="55" column="69" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="69" />
               <folding>
                 <element signature="e#1133#1139#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/V1/upstairLights.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+              <folding>
+                <element signature="e#2364#2370#0#HTML" expanded="true" />
+                <element signature="e#2463#2469#0#HTML" expanded="true" />
+                <element signature="e#2869#2875#0#HTML" expanded="true" />
+                <element signature="e#2968#2974#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,12 +185,13 @@
         <option value="$PROJECT_DIR$/V1/index.php" />
         <option value="$PROJECT_DIR$/V1/php/MainHelper.php" />
         <option value="$PROJECT_DIR$/V1/downstairLights.php" />
-        <option value="$PROJECT_DIR$/V1/switchlight.php" />
         <option value="$PROJECT_DIR$/V1/home.php" />
+        <option value="$PROJECT_DIR$/V1/switchlight.php" />
+        <option value="$PROJECT_DIR$/V1/upstairLights.php" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -185,22 +216,13 @@
             <path>
               <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
               <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
-              <item name="DownstairsLight" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
-              <item name="Helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
-              <item name="SwitchLight" type="462c0819:PsiDirectoryNode" />
+              <item name="V1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
               <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
               <item name="V1" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
@@ -212,7 +234,8 @@
               <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
               <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
               <item name="V1" type="462c0819:PsiDirectoryNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="upStairs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -232,11 +255,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="W:\mikedhoore.be\HomeAuto\V1\img\upStairs" />
       <recent name="W:\mikedhoore.be\HomeAuto\V1\img" />
       <recent name="W:\mikedhoore.be\HomeAuto\V1\img\downStairs" />
       <recent name="W:\mikedhoore.be\HomeAuto\V1\img\weather" />
       <recent name="W:\mikedhoore.be\HomeAuto\V1\js" />
-      <recent name="W:\mikedhoore.be\HomeAuto\V1\css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="W:\mikedhoore.be\HomeAuto\V1\js" />
@@ -282,7 +305,7 @@
       <workItem from="1558293671001" duration="575000" />
       <workItem from="1558371901018" duration="638000" />
       <workItem from="1558438837235" duration="2689000" />
-      <workItem from="1559131261000" duration="8174000" />
+      <workItem from="1559131261000" duration="9960000" />
     </task>
     <task id="LOCAL-00001" summary="Insert of Downstairs couch light&#10;+ Functioning login in Vaillant API">
       <created>1557168129569</created>
@@ -302,10 +325,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116810000" />
+    <option name="totallyTimeSpent" value="118596000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -491,13 +514,6 @@
     <entry file="file://$PROJECT_DIR$/V1/js/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/V1/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DownstairsLight/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-624">
@@ -550,10 +566,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/V1/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="55" column="69" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="69" />
+          <folding>
+            <element signature="e#1133#1139#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/V1/downstairLights.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="69" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="69" />
+        <state relative-caret-position="336">
+          <caret line="14" column="62" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="62" />
           <folding>
             <element signature="e#1016#1022#0#HTML" expanded="true" />
             <element signature="e#1115#1121#0#HTML" expanded="true" />
@@ -563,17 +596,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/V1/switchlight.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        <state relative-caret-position="216">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/V1/home.php">
+    <entry file="file://$PROJECT_DIR$/V1/upstairLights.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="51" column="30" lean-forward="true" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+        <state relative-caret-position="216">
+          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
           <folding>
-            <element signature="e#1133#1139#0#HTML" expanded="true" />
+            <element signature="e#2364#2370#0#HTML" expanded="true" />
+            <element signature="e#2463#2469#0#HTML" expanded="true" />
+            <element signature="e#2869#2875#0#HTML" expanded="true" />
+            <element signature="e#2968#2974#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
