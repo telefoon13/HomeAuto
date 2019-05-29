@@ -8,14 +8,35 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/index.js"></script>
     <script src="js/timeanddate.js"></script>
 </head>
 <body>
+<?php
+    include_once ("php/MainHelper.php");
+    //Check if there is a page request
+    if (!checkFilled($_GET['page'])) {
+        $page = 'home';
+        //Check if there are only accepted characters in the request
+    } elseif (checkIndexUrl($_GET['page'])) {
+        $page = 'home';
+        //Check if there is a file named like the request
+    } elseif (!file_exists($_GET['page'] . ".php")) {
+        $page = 'home';
+    } else {
+        $page = $_GET['page'];
+    }
+    ?>
+
 <div class="container-fluid">
     <div class="row" id="R1">
         <div class="d-block col-sm-2 col-6 align-self-center" id="R1C1">
-
+            <?php
+            if ($page == "home"){
+                echo '<a href="index.php?page=sos" id="sosButton"><img src="img/sos.svg" alt="SOS" class="w-75"></a>';
+            } else {
+                echo '<a href="index.php" id="homeButton"><img src="img/home.svg" alt="Home" class="w-75"></a>';
+            }
+            ?>
         </div>
         <div class="d-none d-sm-block col-sm-4 align-self-center" id="R1C2">
             <span id="date_time"></span>
@@ -25,37 +46,19 @@
             <h4>IN : 20&deg;C</h4>
             <h4>OUT : 13&deg;C</h4>
         </div>
-        <div class="d-none d-sm-block col-sm-2 align-self-center" id="R1C4">
-            <img alt="Sun" src="img/weather/sun.svg" width="100px" height="100px">
+        <div class="d-none d-sm-block col-sm-2 align-self-center text-left" id="R1C4">
+            <img alt="Sun" src="img/weather/sun.svg" class="w-50">
         </div>
-        <div class=" col-sm-2 col-6 align-self-center" id="R1C5">E</div>
+        <div class=" col-sm-2 col-6 align-self-center" id="R1C5">
+            <a href="index.php" id="homeButton"><img src="img/home.svg" alt="Home" class="w-75"></a>
+        </div>
     </div>
-    <div class="row" id="R2">
-        <div class="col-sm-2 col-6 align-self-center" id="R2C1">F</div>
-        <div class="col-sm-2 col-6 align-self-center" id="R2C2">G</div>
-        <div class="col-sm-2 col-6 align-self-center" id="R2C3">H</div>
-        <div class="col-sm-2 col-6 align-self-center" id="R2C4">I</div>
-        <div class="col-sm-2 col-6 align-self-center" id="R2C5">J</div>
-        <div class="col-sm-2 col-6 align-self-center" id="R2C6">K</div>
-    </div>
-    <div class="row" id="R3">
-        <div class="col-sm-2 col-6 align-self-center" id="R3C1">L</div>
-        <div class="col-sm-2 col-6 align-self-center" id="R3C2">M</div>
-        <div class="col-sm-2 col-6 align-self-center" id="R3C3">N</div>
-        <div class="col-sm-2 col-6 align-self-center" id="R3C4">O</div>
-        <div class="col-sm-2 col-6 align-self-center" id="R3C5">P</div>
-        <div class="col-sm-2 col-6 align-self-center" id="R3C6">Q</div>
-    </div>
-    <!--
-    <div class="row" id="R4">
-        <div class="col-sm-2 col-6 align-self-center" id="R4C1">R</div>
-        <div class="col-sm-2 col-6 align-self-center" id="R4C2">S</div>
-        <div class="col-sm-2 col-6 align-self-center" id="R4C3">T</div>
-        <div class="col-sm-2 col-6 align-self-center" id="R4C4">U</div>
-        <div class="col-sm-2 col-6 align-self-center" id="R4C5">V</div>
-        <div class="col-sm-2 col-6 align-self-center" id="R4C6">W</div>
-    </div>
-    -->
+
+    <!-- Main of the page -->
+    <?php
+    //Show the requested page
+    include_once($page . '.php');
+    ?>
 </div>
 </body>
 </html>

@@ -1,0 +1,55 @@
+<div class="row" id="R2">
+    <div class="col-sm-2 col-6 align-self-center text-center" id="R2C1">
+        <a href="index.php?page=downstairLights">
+            <img src="img/light.svg" alt="light" class="w-75">
+            <h3>Beneden</h3>
+        </a>
+    </div>
+    <div class="col-sm-2 col-6 align-self-center text-center" id="R2C2">
+        <a href="index.php?page=upstairLights">
+            <img src="img/light.svg" alt="light" class="w-75">
+            <h3>Boven</h3>
+        </a>
+    </div>
+    <div class="col-sm-2 col-6 align-self-center text-center" id="R2C3">
+        <a href="index.php?page=usage">
+            <img src="img/meter.svg" alt="meter" class="w-75">
+            <h3>Verbruik</h3>
+        </a>
+    </div>
+    <div class="col-sm-2 col-6 align-self-center text-center" id="R2C4">
+        <a href="index.php?page=camera">
+            <img src="img/cctv.svg" alt="cctv" class="w-75">
+            <h3>Camera's</h3>
+        </a>
+    </div>
+    <div class="col-sm-2 col-6 align-self-center text-center" id="R2C5">
+        <a href="index.php?page=heater">
+            <img src="img/heater.svg" alt="heater" class="w-75">
+            <h3>Verwarming</h3>
+        </a>
+    </div>
+    <div class="col-sm-2 col-6 align-self-center text-center" id="R2C6">
+        &emsp;
+    </div>
+</div>
+<div class="row" id="R3">
+    <div class="col-sm-2 col-6 align-self-center text-center" id="R3C1">
+        &emsp;
+    </div>
+    <div class="col-sm-2 col-6 align-self-center text-center" id="R3C2">
+        &emsp;
+    </div>
+    <div class="col-sm-2 col-6 align-self-center text-center" id="R3C3">
+        &emsp;
+    </div>
+    <div class="col-sm-2 col-6 align-self-center text-center" id="R3C4">
+        &emsp;
+    </div>
+    <div class="col-sm-2 col-6 align-self-center text-center" id="R3C5">
+        &emsp;
+    </div>
+    <div class="col-sm-2 col-6 align-self-center text-center" id="R3C6">
+        &emsp;
+    </div>
+</div>

@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f703fa8-d3c5-4b05-b1fb-5656f2051e39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/V1/img/cctv.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/downStairs/abc-block.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/downStairs/bedside-table.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/downStairs/couch.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/downStairs/door.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/downStairs/grass.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/downStairs/kitchen.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/downStairs/restaurant.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/downStairs/shed.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/downStairs/terrace.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/downStairs/toilet-paper.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/heater.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/meter.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/js/timeanddate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/downstairLights.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/home.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/php/MainHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/sos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/V1/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/V1/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/V1/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/V1/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/V1/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/V1/js/index.js" afterDir="false" />
     </list>
@@ -51,17 +40,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/V1/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="57" column="7" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
+            <state relative-caret-position="356">
+              <caret line="49" column="66" lean-forward="true" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
+              <folding>
+                <element signature="e#1435#1440#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/V1/js/index.js">
+        <entry file="file://$PROJECT_DIR$/V1/downstairLights.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-210">
-              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+            <state relative-caret-position="144">
+              <caret line="6" column="67" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
+              <folding>
+                <element signature="e#620#626#0#HTML" expanded="true" />
+                <element signature="e#719#725#0#HTML" expanded="true" />
+                <element signature="e#818#824#0#HTML" expanded="true" />
+                <element signature="e#917#923#0#HTML" expanded="true" />
+                <element signature="e#1016#1022#0#HTML" expanded="true" />
+                <element signature="e#1115#1121#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,35 +69,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SwitchLight/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            <state relative-caret-position="408">
+              <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Helpers/LightSwitch.php">
+        <entry file="file://$PROJECT_DIR$/V1/sos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="44" />
+            <state relative-caret-position="48">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/V1/js/timeanddate.js">
+        <entry file="file://$PROJECT_DIR$/V1/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+            <state relative-caret-position="96">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/V1/css/main.css">
+        <entry file="file://$PROJECT_DIR$/V1/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            <state relative-caret-position="192">
+              <caret line="35" selection-start-line="35" selection-end-line="54" selection-end-column="6" />
+              <folding>
+                <element signature="e#1275#1281#0#HTML" expanded="true" />
+                <element signature="e#1407#1413#0#HTML" expanded="true" />
+                <element signature="e#1506#1512#0#HTML" expanded="true" />
+                <element signature="e#1605#1611#0#HTML" expanded="true" />
+                <element signature="e#1704#1710#0#HTML" expanded="true" />
+                <element signature="e#1803#1809#0#HTML" expanded="true" />
+                <element signature="e#1770#1776#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/V1/php/MainHelper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -116,7 +134,13 @@
     <findStrings>
       <find>id</find>
       <find>align-self-center text-center</find>
+      <find>&quot;&gt;&lt;img src=</find>
+      <find>align-self-center&quot;</find>
     </findStrings>
+    <replaceStrings>
+      <replace>&quot; class=&quot;aImgLink&quot;&gt;&lt;img src=</replace>
+      <replace>align-self-center text-center&quot;</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -144,14 +168,18 @@
         <option value="$PROJECT_DIR$/Helpers/Vaillant.php" />
         <option value="$PROJECT_DIR$/js/timeanddate.js" />
         <option value="$PROJECT_DIR$/V1/js/timeanddate.js" />
-        <option value="$PROJECT_DIR$/V1/index.php" />
         <option value="$PROJECT_DIR$/V1/css/main.css" />
+        <option value="$PROJECT_DIR$/V1/php/MainHelper.php" />
+        <option value="$PROJECT_DIR$/V1/index.php" />
+        <option value="$PROJECT_DIR$/V1/sos.php" />
+        <option value="$PROJECT_DIR$/V1/home.php" />
         <option value="$PROJECT_DIR$/V1/js/index.js" />
+        <option value="$PROJECT_DIR$/V1/downstairLights.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -175,6 +203,11 @@
             <path>
               <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
               <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
+              <item name="SwitchLight" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
               <item name="V1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -192,11 +225,12 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="W:/blog.mikedhoore.be" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -246,6 +280,11 @@
       <workItem from="1558075595096" duration="1428000" />
       <workItem from="1558105108715" duration="13185000" />
       <workItem from="1558178080635" duration="1246000" />
+      <workItem from="1558259362734" duration="1602000" />
+      <workItem from="1558293671001" duration="575000" />
+      <workItem from="1558371901018" duration="638000" />
+      <workItem from="1558438837235" duration="2689000" />
+      <workItem from="1559131261000" duration="2727000" />
     </task>
     <task id="LOCAL-00001" summary="Insert of Downstairs couch light&#10;+ Functioning login in Vaillant API">
       <created>1557168129569</created>
@@ -265,13 +304,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103132000" />
+    <option name="totallyTimeSpent" value="111363000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.12313433" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.12846482" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
@@ -457,45 +497,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/V1/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="7" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SwitchLight/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Helpers/LightSwitch.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="216">
           <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/V1/js/timeanddate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="216">
           <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/V1/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="552">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/php/MainHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="49" column="66" lean-forward="true" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
+          <folding>
+            <element signature="e#1435#1440#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/sos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="35" selection-start-line="35" selection-end-line="54" selection-end-column="6" />
+          <folding>
+            <element signature="e#1275#1281#0#HTML" expanded="true" />
+            <element signature="e#1407#1413#0#HTML" expanded="true" />
+            <element signature="e#1506#1512#0#HTML" expanded="true" />
+            <element signature="e#1605#1611#0#HTML" expanded="true" />
+            <element signature="e#1704#1710#0#HTML" expanded="true" />
+            <element signature="e#1803#1809#0#HTML" expanded="true" />
+            <element signature="e#1770#1776#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/V1/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        <state relative-caret-position="96">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SwitchLight/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/downstairLights.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="67" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
+          <folding>
+            <element signature="e#620#626#0#HTML" expanded="true" />
+            <element signature="e#719#725#0#HTML" expanded="true" />
+            <element signature="e#818#824#0#HTML" expanded="true" />
+            <element signature="e#917#923#0#HTML" expanded="true" />
+            <element signature="e#1016#1022#0#HTML" expanded="true" />
+            <element signature="e#1115#1121#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
