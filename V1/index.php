@@ -29,16 +29,16 @@
 
 <div class="container-fluid">
     <div class="row" id="R1">
-        <div class="d-block col-sm-2 col-6 align-self-center" id="R1C1">
+        <div class="col-sm-2 col-6 align-self-center text-center" id="R1C1">
             <?php
             if ($page == "home"){
-                echo '<a href="index.php?page=sos" id="sosButton"><img src="img/sos.svg" alt="SOS" class="w-75"></a>';
+                echo '<a href="index.php?page=sos"><img src="img/sos.svg" alt="SOS" class="w-75"><h5>SOS</h5></a>';
             } else {
-                echo '<a href="index.php" id="homeButton"><img src="img/home.svg" alt="Home" class="w-75"></a>';
+                echo '<a href="index.php"><img src="img/home.svg" alt="Home" class="w-75"><h5>Home</h5></a>';
             }
             ?>
         </div>
-        <div class="d-none d-sm-block col-sm-4 align-self-center" id="R1C2">
+        <div class="d-none d-sm-block col-sm-4 align-self-center text-center" id="R1C2">
             <span id="date_time"></span>
             <script type="text/javascript">window.onload = date_time('date_time');</script>
         </div>
@@ -49,8 +49,8 @@
         <div class="d-none d-sm-block col-sm-2 align-self-center text-left" id="R1C4">
             <img alt="Sun" src="img/weather/sun.svg" class="w-50">
         </div>
-        <div class=" col-sm-2 col-6 align-self-center" id="R1C5">
-            <a href="index.php" id="homeButton"><img src="img/home.svg" alt="Home" class="w-75"></a>
+        <div class="col-sm-2 col-6 align-self-center text-center" id="R1C5">
+            <a href="index.php?page=exit"><img src="img/exit.svg" alt="Exit" class="w-75"><h5>Exit</h5></a>
         </div>
     </div>
 

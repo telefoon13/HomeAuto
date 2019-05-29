@@ -20,14 +20,14 @@ a:hover{
 }
 
 .row{
-    height: 200px;
+    min-height: 200px;
 }
 
-.col-sm-2, .col-sm-4{
-    text-align: center;
-    #min-height: 150px;
-}
-
-h1, h2, h3, h4{
+h1, h2, h3, h4,h5,h6{
     font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .col-6 {padding-top:50px;}
 }
