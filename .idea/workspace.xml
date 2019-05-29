@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f703fa8-d3c5-4b05-b1fb-5656f2051e39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/V1/camera.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/php/hue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/V1/camera.php" beforeDir="false" afterPath="$PROJECT_DIR$/V1/camera.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/V1/js/timeanddate.js" beforeDir="false" afterPath="$PROJECT_DIR$/V1/js/timeanddate.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,23 +35,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/V1/downstairLights.php">
+        <entry file="file://$PROJECT_DIR$/V1/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="14" column="62" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="62" />
-              <folding>
-                <element signature="e#1016#1022#0#HTML" expanded="true" />
-                <element signature="e#1115#1121#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/V1/switchlight.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+            <state relative-caret-position="384">
+              <caret line="40" column="76" selection-start-line="40" selection-start-column="76" selection-end-line="40" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -60,27 +48,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="24">
               <caret line="1" column="63" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/V1/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/V1/home.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="55" column="69" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="69" />
-              <folding>
-                <element signature="e#1133#1139#0#HTML" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -101,6 +68,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/V1/js/timeanddate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/V1/php/hue.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="24">
@@ -109,42 +85,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/V1/camera.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+            <state relative-caret-position="372">
+              <caret line="22" column="107" selection-start-line="22" selection-start-column="107" selection-end-line="22" selection-end-column="107" />
               <folding>
                 <element signature="e#160#186#0#HTML" expanded="true" />
                 <element signature="e#498#524#0#HTML" expanded="true" />
-                <element signature="e#939#965#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Camera/2/index.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="20" column="49" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="49" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Camera/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="41" column="83" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="83" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state>
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -198,7 +156,6 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Helpers/Vaillant.php" />
         <option value="$PROJECT_DIR$/js/timeanddate.js" />
-        <option value="$PROJECT_DIR$/V1/js/timeanddate.js" />
         <option value="$PROJECT_DIR$/V1/sos.php" />
         <option value="$PROJECT_DIR$/V1/js/index.js" />
         <option value="$PROJECT_DIR$/V1/css/main.css" />
@@ -210,6 +167,8 @@
         <option value="$PROJECT_DIR$/V1/upstairLights.php" />
         <option value="$PROJECT_DIR$/V1/php/hue.php" />
         <option value="$PROJECT_DIR$/V1/camera.php" />
+        <option value="$PROJECT_DIR$/V1/js/timeanddate.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -234,28 +193,6 @@
             <path>
               <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
               <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
-              <item name="Camera" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
-              <item name="Camera" type="462c0819:PsiDirectoryNode" />
-              <item name="2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
-              <item name="V1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
-              <item name="V1" type="462c0819:PsiDirectoryNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -325,7 +262,7 @@
       <workItem from="1558293671001" duration="575000" />
       <workItem from="1558371901018" duration="638000" />
       <workItem from="1558438837235" duration="2689000" />
-      <workItem from="1559131261000" duration="11760000" />
+      <workItem from="1559131261000" duration="12585000" />
     </task>
     <task id="LOCAL-00001" summary="Insert of Downstairs couch light&#10;+ Functioning login in Vaillant API">
       <created>1557168129569</created>
@@ -345,7 +282,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120396000" />
+    <option name="totallyTimeSpent" value="121221000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -502,30 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/timeanddate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="91" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="27" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/V1/js/timeanddate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/V1/js/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -533,16 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-624">
           <caret line="52" column="31" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/V1/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="40" column="76" selection-start-line="40" selection-start-column="76" selection-end-line="40" selection-end-column="76" />
-          <folding>
-            <element signature="e#1435#1440#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -658,15 +561,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/V1/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="40" column="76" selection-start-line="40" selection-start-column="76" selection-end-line="40" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/js/timeanddate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/timeanddate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="62" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="62" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/V1/camera.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+        <state relative-caret-position="372">
+          <caret line="22" column="107" selection-start-line="22" selection-start-column="107" selection-end-line="22" selection-end-column="107" />
           <folding>
             <element signature="e#160#186#0#HTML" expanded="true" />
             <element signature="e#498#524#0#HTML" expanded="true" />
-            <element signature="e#939#965#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>

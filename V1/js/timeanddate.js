@@ -18,7 +18,7 @@ function date_time(id)
     {
         m = "0"+m;
     }
-    result = '<h1>' + h + ':' + m + '</h1><h3>' + days[day] + ' ' + d + ' ' + months[month] + ' ' + year + '</h3>';
+    result = '<h1 class="display-3" style="font-weight: bold;">' + h + ':' + m + '</h1><h3>' + days[day] + ' ' + d + ' ' + months[month] + ' ' + year + '</h3>';
     document.getElementById(id).innerHTML = result;
     setTimeout('date_time("'+id+'");','10000');
     return true;
