@@ -47,9 +47,15 @@
         &emsp;
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R3C5">
-        &emsp;
+        <a href="index.php?page=switchlight&ip=192.168.178.154&port=1">
+            <img src="img/light.svg" alt="light" class="w-75">
+            <h5>Alles aan</h5>
+        </a>
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R3C6">
-        &emsp;
+        <a href="index.php?page=switchlight&ip=192.168.178.154&port=2">
+            <img src="img/light.svg" alt="light" class="w-75">
+            <h5>Alles uit</h5>
+        </a>
     </div>
 </div>
