@@ -20,10 +20,13 @@ function checkIndexUrl($input)
     }
 }
 
-function switchSonOffLight($ip, $port){
+function switchSonOffLight($ip, $port, $state){
+    if (!checkFilled($state)){
+        $state = "TOGGLE";
+    }
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_URL, "http://".$ip."/cm?cmnd=Power".$port."%20TOGGLE");
+    curl_setopt($ch, CURLOPT_URL, "http://".$ip."/cm?cmnd=Power".$port."%20".$state);
     curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_exec($ch);
     $result = curl_getinfo($ch, CURLINFO_HTTP_CODE);
