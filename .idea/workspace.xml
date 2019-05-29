@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f703fa8-d3c5-4b05-b1fb-5656f2051e39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/V1/img/upStairs/Masterbedroom.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/upStairs/bed.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/upStairs/bedSimple.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/upStairs/desk.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/upStairs/dressing.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/upStairs/mirror.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/upStairs/shower.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/img/upStairs/stairs.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V1/upstairLights.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/camera.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/V1/php/hue.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/V1/switchlight.php" beforeDir="false" afterPath="$PROJECT_DIR$/V1/switchlight.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,18 +34,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/V1/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
-              <caret line="40" column="76" selection-start-line="40" selection-start-column="76" selection-end-line="40" selection-end-column="76" />
-              <folding>
-                <element signature="e#1435#1440#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/V1/downstairLights.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
@@ -76,19 +56,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/V1/php/MainHelper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/V1/sos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="2" selection-end-column="6" />
+            <state relative-caret-position="24">
+              <caret line="1" column="63" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -114,16 +85,65 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/V1/upstairLights.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+              <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
               <folding>
                 <element signature="e#2364#2370#0#HTML" expanded="true" />
                 <element signature="e#2463#2469#0#HTML" expanded="true" />
                 <element signature="e#2869#2875#0#HTML" expanded="true" />
                 <element signature="e#2968#2974#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/V1/php/hue.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/V1/camera.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="492">
+              <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+              <folding>
+                <element signature="e#160#186#0#HTML" expanded="true" />
+                <element signature="e#498#524#0#HTML" expanded="true" />
+                <element signature="e#939#965#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Camera/2/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="20" column="49" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="49" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Camera/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="41" column="83" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="83" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -188,10 +208,12 @@
         <option value="$PROJECT_DIR$/V1/home.php" />
         <option value="$PROJECT_DIR$/V1/switchlight.php" />
         <option value="$PROJECT_DIR$/V1/upstairLights.php" />
+        <option value="$PROJECT_DIR$/V1/php/hue.php" />
+        <option value="$PROJECT_DIR$/V1/camera.php" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -216,26 +238,24 @@
             <path>
               <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
               <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
+              <item name="Camera" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
+              <item name="Camera" type="462c0819:PsiDirectoryNode" />
+              <item name="2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
               <item name="V1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
               <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
               <item name="V1" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
-              <item name="V1" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HomeAuto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HomeAuto" type="462c0819:PsiDirectoryNode" />
-              <item name="V1" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="upStairs" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -305,7 +325,7 @@
       <workItem from="1558293671001" duration="575000" />
       <workItem from="1558371901018" duration="638000" />
       <workItem from="1558438837235" duration="2689000" />
-      <workItem from="1559131261000" duration="9960000" />
+      <workItem from="1559131261000" duration="11760000" />
     </task>
     <task id="LOCAL-00001" summary="Insert of Downstairs couch light&#10;+ Functioning login in Vaillant API">
       <created>1557168129569</created>
@@ -325,7 +345,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118596000" />
+    <option name="totallyTimeSpent" value="120396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -361,11 +381,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Get info from Vaillant rooms + show current temp in app + gray when heating is off" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Camera/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_load_and_refresh_div_every_10_seconds.zip/load_and_refresh_div_every_10_seconds/js/loaded_contents.js" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_load_and_refresh_div_every_10_seconds.zip/load_and_refresh_div_every_10_seconds/index.php" />
     <entry file="file://$PROJECT_DIR$/test.php">
@@ -531,13 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/V1/sos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Helpers/Vaillant.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -604,12 +612,60 @@
     <entry file="file://$PROJECT_DIR$/V1/upstairLights.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+          <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
           <folding>
             <element signature="e#2364#2370#0#HTML" expanded="true" />
             <element signature="e#2463#2469#0#HTML" expanded="true" />
             <element signature="e#2869#2875#0#HTML" expanded="true" />
             <element signature="e#2968#2974#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/php/hue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/sos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="63" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Camera/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="41" column="83" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="83" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Camera/2/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="20" column="49" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/camera.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding>
+            <element signature="e#160#186#0#HTML" expanded="true" />
+            <element signature="e#498#524#0#HTML" expanded="true" />
+            <element signature="e#939#965#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
