@@ -29,6 +29,26 @@ function getLightInfo($id){
     }
 }
 
+function updateLight($id, $state, $RGB = null){
+    global $getLight;
+    //Body to send in PUT
+    $body = array(
+        "on" => $state
+    );
+    if (checkFilled($RGB)){
+        $xybri = rgbToXyBri($RGB);
+        $xy = array($xybri["x"],$xybri["y"]);
+        $body["xy"] = $xy;
+        //$body["bri"] = $xybri["bri"];
+    }
+    //Encode body in JSON
+    $bodyJSON = json_encode($body);
+    //Complete URL
+    $fullURL = $getLight.$id."/state";
+    //Do the call
+    $call = cUrl($fullURL, "PUT", $bodyJSON);
+    return $call[0];
+}
 
 
 
@@ -68,4 +88,40 @@ function xyBriToRgb($x,$y,$bri)
     if (strlen($b) < 2)     $b = "0" . $b;
 
     return "#".$r.$g.$b;
+}
+//Function to get the X, Y and Bri to send to hue
+//Source https://gist.github.com/lgladdy/da584d3a1228fa197c6c
+function rgbToXyBri($hex) {
+    //Get the hex and make it into an array (RGB)
+    $hex = str_replace("#", "", $hex);
+    if(strlen($hex) == 3) {
+        $r = hexdec(substr($hex,0,1).substr($hex,0,1));
+        $g = hexdec(substr($hex,1,1).substr($hex,1,1));
+        $b = hexdec(substr($hex,2,1).substr($hex,2,1));
+    } else {
+        $r = hexdec(substr($hex,0,2));
+        $g = hexdec(substr($hex,2,2));
+        $b = hexdec(substr($hex,4,2));
+    }
+    $rgb = array('r'=>($r / 255),'g'=>($g / 255),'b'=>($b / 255));
+    //Take the TGB array an make it into an HUE compatible format
+    $r = $rgb['r'];
+    $g = $rgb['g'];
+    $b = $rgb['b'];
+    if ($r < 0 || $r > 1 || $g < 0 || $g > 1 || $b < 0 || $b > 1) {
+        throw new Exception('Invalid RGB array');
+    }
+
+    $rt = ($r > 0.04045) ? pow(($r + 0.055) / (1.0 + 0.055), 2.4) : ($r / 12.92);
+    $gt = ($g > 0.04045) ? pow(($g + 0.055) / (1.0 + 0.055), 2.4) : ($g / 12.92);
+    $bt = ($b > 0.04045) ? pow(($b + 0.055) / (1.0 + 0.055), 2.4) : ($b / 12.92);
+    $cie_x = $rt * 0.649926 + $gt * 0.103455 + $bt * 0.197109;
+    $cie_y = $rt * 0.234327 + $gt * 0.743075 + $bt * 0.022598;
+    $cie_z = $rt * 0.0000000 + $gt * 0.053077 + $bt * 1.035763;
+
+    $hue_x = $cie_x / ($cie_x + $cie_y + $cie_z);
+    $hue_y = $cie_y / ($cie_x + $cie_y + $cie_z);
+    $hue_bri = round($cie_y*255);
+
+    return array('x'=>$hue_x,'y'=>$hue_y,'bri'=>$hue_bri);
 }

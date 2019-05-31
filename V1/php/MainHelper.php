@@ -68,5 +68,14 @@ function cUrl($url,$method = "GET",$body = null, $useCookie=false){
     $httpCode = curl_getinfo($cUrl, CURLINFO_HTTP_CODE);
     //The return
     $cUrlReturn = json_decode($cUrlReturn,true);
+    debug_to_console($url.$method.$body.$httpCode);
     return array($httpCode,$cUrlReturn);
+}
+
+function debug_to_console( $data ) {
+    $output = $data;
+    if ( is_array( $output ) )
+        $output = implode( ',', $output);
+
+    echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
 }
