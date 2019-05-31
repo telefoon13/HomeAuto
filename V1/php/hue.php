@@ -19,6 +19,7 @@ function getLightInfo($id){
             "effect" => $values['state']['effect'],
             "x" => $values['state']['xy'][0],
             "y" => $values['state']['xy'][1],
+            "rgb" => xyBriToRgb($values['state']['xy'][0],$values['state']['xy'][1],$values['state']['bri']),
             "swupdate_state" => $values['swupdate']['state'],
             "name" => $values['name']
         );
