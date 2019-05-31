@@ -327,8 +327,6 @@ class Vaillant
         $httpCode = curl_getinfo($cUrl, CURLINFO_HTTP_CODE);
         //The return
         $cUrlReturn = json_decode($cUrlReturn,true);
-        //Debugger::debug_to_console($url.$method.$body.$httpCode);
-
         return array($httpCode,$cUrlReturn);
     }
 

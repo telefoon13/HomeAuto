@@ -20,16 +20,53 @@ function checkIndexUrl($input)
     }
 }
 
+//Function to swhitch the SonOff lights
 function switchSonOffLight($ip, $port, $state){
     if (!checkFilled($state)){
         $state = "TOGGLE";
     }
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_URL, "http://".$ip."/cm?cmnd=Power".$port."%20".$state);
-    curl_setopt($ch, CURLOPT_HEADER, 0);
-    curl_exec($ch);
-    $result = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    curl_close($ch);
-    return $result;
+    $url = "http://".$ip."/cm?cmnd=Power".$port."%20".$state;
+    $result = cUrl($url);
+    return $result[0];
+}
+
+//Universal cUrl method to do the API calls
+function cUrl($url,$method = "GET",$body = null, $useCookie=false){
+    //Initialise cUrl
+    $cUrl = curl_init();
+    //Make sure the returns goes to the variable
+    curl_setopt($cUrl, CURLOPT_RETURNTRANSFER, 1);
+    //Setup the chosen method
+    switch ($method){
+        case "POST":
+            curl_setopt($cUrl, CURLOPT_POST, true);
+            curl_setopt($cUrl, CURLOPT_POSTFIELDS, $body);
+            break;
+        case "PUT":
+            curl_setopt($cUrl, CURLOPT_CUSTOMREQUEST, $method);
+            curl_setopt($cUrl, CURLOPT_POSTFIELDS, $body);
+            break;
+        case "DELETE":
+            curl_setopt($cUrl, CURLOPT_CUSTOMREQUEST, $method);
+            break;
+        default:
+            break;
+    }
+    //HTTP header JSON
+    curl_setopt($cUrl, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+    //Setup the URL to go to
+    curl_setopt($cUrl, CURLOPT_URL, $url);
+    //Setup the cookieJar & File
+    if ($useCookie){
+        $CookieJar = "/tmp/HomeAuto_cookieJar.txt";
+        curl_setopt($cUrl, CURLOPT_COOKIEJAR, $CookieJar);
+        curl_setopt($cUrl, CURLOPT_COOKIEFILE, $CookieJar);
+    }
+    //Execute the cUrl
+    $cUrlReturn = curl_exec($cUrl);
+    //Get the HTTP response Code
+    $httpCode = curl_getinfo($cUrl, CURLINFO_HTTP_CODE);
+    //The return
+    $cUrlReturn = json_decode($cUrlReturn,true);
+    return array($httpCode,$cUrlReturn);
 }
