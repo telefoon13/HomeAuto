@@ -43,8 +43,8 @@
             <script type="text/javascript">window.onload = date_time('date_time');</script>
         </div>
         <div class="d-none d-sm-block col-sm-2 align-self-center text-right" id="R1C3">
-            <h4>IN : 20&deg;C</h4>
-            <h4>OUT : 13&deg;C</h4>
+            <h4><img src="img/weather/inside.svg" width="23px" alt="inside"> 20&deg;C</h4>
+            <h4><img src="img/weather/outside.svg" width="23px" alt="inside"> 13&deg;C</h4>
         </div>
         <div class="d-none d-sm-block col-sm-2 align-self-center text-left" id="R1C4">
             <img alt="Sun" src="img/weather/sun.svg" class="w-50">

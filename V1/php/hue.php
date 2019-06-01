@@ -1,7 +1,7 @@
 <?php
 include_once ("MainHelper.php");
-
-$user = "hI5h45SfpDgZRc4PIzsoYeGJus5a5iCiPj6aeawm";
+include_once(".secrets.php");
+$user = $hue_User;
 $baseUrl = "http://192.168.178.157/api/".$user;
 $getLight = $baseUrl."/lights/";
 
