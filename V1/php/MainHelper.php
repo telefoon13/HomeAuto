@@ -2,7 +2,7 @@
 //Function to check if a field is set and not empty
 function checkFilled($input)
 {
-    if (isset($input) && !empty($input) && $input != "") {
+    if (isset($input) && !empty($input) && $input != "" && $input != null) {
         return true;
     } else {
         return false;
@@ -31,7 +31,7 @@ function switchSonOffLight($ip, $port, $state){
 }
 
 //Universal cUrl method to do the API calls
-function cUrl($url,$method = "GET",$body = null, $useCookie=false){
+function cUrl($url,$method = "GET",$body = null, $useCookie=false, $header = null){
     //Initialise cUrl
     $cUrl = curl_init();
     //Make sure the returns goes to the variable
@@ -53,7 +53,12 @@ function cUrl($url,$method = "GET",$body = null, $useCookie=false){
             break;
     }
     //HTTP header JSON
-    curl_setopt($cUrl, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+    if (checkFilled($header)){
+        curl_setopt($cUrl, CURLOPT_HTTPHEADER, array($header));
+    } else {
+        curl_setopt($cUrl, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+    }
+
     //Setup the URL to go to
     curl_setopt($cUrl, CURLOPT_URL, $url);
     //Setup the cookieJar & File

@@ -13,6 +13,8 @@
 <body>
 <?php
     include_once ("php/MainHelper.php");
+    include_once ("php/netatmo.php");
+    $weatherinfo = getWeatherStationInfo();
     //Check if there is a page request
     if (!checkFilled($_GET['page'])) {
         $page = 'home';
@@ -32,9 +34,9 @@
         <div class="col-sm-2 col-6 align-self-center text-center" id="R1C1">
             <?php
             if ($page == "home"){
-                echo '<a href="index.php?page=sos"><img src="img/sos.svg" alt="SOS" class="w-75"><h5>SOS</h5></a>';
+                echo '<a href="index.php?page=sos"><img src="img/sos.svg" alt="SOS" class="w-50"><h5>SOS</h5></a>';
             } else {
-                echo '<a href="index.php"><img src="img/home.svg" alt="Home" class="w-75"><h5>Home</h5></a>';
+                echo '<a href="index.php"><img src="img/home.svg" alt="Home" class="w-50"><h5>Home</h5></a>';
             }
             ?>
         </div>
@@ -43,14 +45,14 @@
             <script type="text/javascript">window.onload = date_time('date_time');</script>
         </div>
         <div class="d-none d-sm-block col-sm-2 align-self-center text-right" id="R1C3">
-            <h4><img src="img/weather/inside.svg" width="23px" alt="inside"> 20&deg;C</h4>
-            <h4><img src="img/weather/outside.svg" width="23px" alt="inside"> 13&deg;C</h4>
+            <h4><img src="img/weather/inside.svg" width="23px" alt="inside"> <?= $weatherinfo["temperature"];?>&deg;C</h4>
+            <h4><img src="img/weather/outside.svg" width="23px" alt="inside"> <?= $weatherinfo["temperature_OUT"];?>&deg;C</h4>
         </div>
         <div class="d-none d-sm-block col-sm-2 align-self-center text-left" id="R1C4">
             <img alt="Sun" src="img/weather/sun.svg" class="w-50">
         </div>
         <div class="col-sm-2 col-6 align-self-center text-center" id="R1C5">
-            <a href="index.php?page=exit"><img src="img/exit.svg" alt="Exit" class="w-75"><h5>Exit</h5></a>
+            <a href="index.php?page=exit"><img src="img/exit.svg" alt="Exit" class="w-50"><h5>Exit</h5></a>
         </div>
     </div>
 
