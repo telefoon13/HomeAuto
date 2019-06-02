@@ -99,8 +99,12 @@ function getWeatherStationInfo(){
             "rf_status_OUT" => $values["body"]["devices"][0]["modules"][0]["rf_status"],
             "battery_percent_OUT" => $values["body"]["devices"][0]["modules"][0]["battery_percent"],
         );
-        return $info;
+        $stationInfo["stationInfo"] = $info;
+        return $stationInfo;
     } else {
         return $call[0];
     }
 }
+
+$jsonToReturn = json_encode(getWeatherStationInfo());
+echo $jsonToReturn;

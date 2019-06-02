@@ -73,7 +73,7 @@ function cUrl($url,$method = "GET",$body = null, $useCookie=false, $header = nul
     $httpCode = curl_getinfo($cUrl, CURLINFO_HTTP_CODE);
     //The return
     $cUrlReturn = json_decode($cUrlReturn,true);
-    debug_to_console($url.$method.$body.$httpCode);
+    //debug_to_console($url.$method.$body.$httpCode);
     return array($httpCode,$cUrlReturn);
 }
 
