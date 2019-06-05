@@ -42,5 +42,5 @@ $(document).ready(function () {
             divs += '</h4>';
         }
         $('#R1C3').html(divs);
-        //setInterval('getThemAll();', '600000');
+        // setInterval('getThemAll();', '600000');
     }

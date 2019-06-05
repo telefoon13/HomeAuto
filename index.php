@@ -1,94 +1,71 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <title>Home Automation By Mike</title>
-    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+    <title>Home Auto</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="css.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script src="js/timeanddate.js"></script>
+    <script src="js/weather.js"></script>
 </head>
 <body>
+<?php
+    include_once ("php/MainHelper.php");
+    //Check if there is a page request
+    if (!checkFilled($_GET['page'])) {
+        $page = 'home';
+        //Check if there are only accepted characters in the request
+    } elseif (checkIndexUrl($_GET['page'])) {
+        $page = 'home';
+        //Check if there is a file named like the request
+    } elseif (!file_exists($_GET['page'] . ".php")) {
+        $page = 'home';
+    } else {
+        $page = $_GET['page'];
+    }
+    ?>
 
 <div class="container-fluid">
-    <div class="row" style="height: 200px">
-        <div class="col-3 align-self-center text-center">
-            <a href="SoS">
-                <i style="font-size: 80px; " class="fas fa-exclamation-triangle"></i>
-                <h3>SOS</h3>
-            </a>
+    <div class="row" id="R1">
+        <div class="col-sm-2 col-6 align-self-center text-center" id="R1C1">
+            <?php
+            if ($page == "home"){
+                echo '<a href="index.php?page=sos"><img src="img/sos.svg" alt="SOS" class="w-50">
+                        <!--<h5>SOS</h5>-->
+                      </a>';
+            } else {
+                echo '<a href="index.php"><img src="img/back.svg" alt="Back" class="w-75">
+                        <!--<h5>Home</h5>-->
+                      </a>';
+            }
+            ?>
         </div>
-        <div class="col-6 align-self-center text-center">
+        <div class="d-none d-sm-block col-sm-4 align-self-center text-center" id="R1C2">
             <span id="date_time"></span>
             <script type="text/javascript">window.onload = date_time('date_time');</script>
         </div>
-        <div class="col-3 align-self-center text-center">
-            <a href="#">
-                <i style="font-size: 80px; " class="fas fa-door-open"></i>
-                <h3>Leave home</h3>
-            </a>
-           </div>
-    </div>
-
-    <div class="row" style="height: 200px">
-        <div class="col-3 align-self-center text-center">
-            <a href="DownstairsLight">
-                <i style="font-size: 80px; " class="fas fa-lightbulb"></i>
-                <h3>Downstairs</h3>
-            </a>
+        <div class="d-none d-sm-block col-sm-2 align-self-center text-right" id="R1C3">
+            TEMP loading
         </div>
-        <div class="col-3 align-self-center text-center">
-            <a href="UpstairsLight">
-                <i style="font-size: 80px; " class="fas fa-lightbulb"></i>
-                <h3>Upstairs</h3>
-            </a>
+        <div class="d-none d-sm-block col-sm-2 align-self-center text-left" id="R1C4">
+            <img alt="Sun" src="img/weather/sun.svg" class="w-50">
         </div>
-        <div class="col-3 align-self-center text-center">
-            <a href="#">
-                <!--<i style="font-size: 80px; " class="fas fa-lightbulb"></i>
-                <h3>2th floor</h3>-->
-            </a>
-        </div>
-        <div class="col-3 align-self-center text-center">
-            <a href="PowerUsages">
-                <i style="font-size: 80px; " class="fas fa-chart-area"></i>
-                <h3>Power usages</h3>
+        <div class="col-sm-2 col-6 align-self-center text-center" id="R1C5">
+            <a href="index.php?page=exit"><img src="img/exit.svg" alt="Exit" class="w-50">
+                <!--<h5>Exit</h5>-->
             </a>
         </div>
     </div>
 
-    <div class="row" style="height: 200px">
-        <div class="col-3 align-self-center text-center">
-            <a href="Heating">
-                <i style="font-size: 80px; " class="fas fa-temperature-high"></i>
-                <h3>Heating</h3>
-            </a>
-        </div>
-        <div class="col-3 align-self-center text-center">
-            <a href="Camera">
-                <i style="font-size: 80px; " class="fas fa-video"></i>
-                <h3>Cameras</h3>
-            </a>
-        </div>
-        <div class="col-3 align-self-center text-center">
-            <a href="#">
-                <i style="font-size: 80px; " class="fas fa-tree"></i>
-                <h3>Garden</h3>
-            </a>
-        </div>
-        <div class="col-3 align-self-center text-center">
-            <a href="#">
-                <i style="font-size: 80px; " class="fas fa-arrow-right"></i>
-                <h3>Next page</h3>
-            </a>
-        </div>
-    </div>
+    <!-- Main of the page -->
+    <?php
+    //Show the requested page
+    include_once($page . '.php');
+    ?>
 </div>
-
 </body>
 </html>
+

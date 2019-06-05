@@ -4,10 +4,10 @@ function date_time(id)
     date = new Date;
     year = date.getFullYear();
     month = date.getMonth();
-    months = new Array('januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december');
+    months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
     d = date.getDate();
     day = date.getDay();
-    days = new Array('zon', 'maa', 'din', 'woe', 'don', 'vri', 'zat');
+    days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
     h = date.getHours();
     if(h<10)
     {
@@ -18,7 +18,7 @@ function date_time(id)
     {
         m = "0"+m;
     }
-    result = '<h1 class="display-3" style="font-weight: bold;">' + h + ':' + m + '</h1><h3>' + days[day] + ' ' + d + ' ' + months[month] + ' ' + year + '</h3>';
+    result = '<h1 class="display-1" style="font-weight: bold;">' + h + ':' + m + '</h1><h4>' + days[day] + ' ' + months[month] + ' ' + d + ' ' + year + '</h4>';
     document.getElementById(id).innerHTML = result;
     setTimeout('date_time("'+id+'");','10000');
     return true;
