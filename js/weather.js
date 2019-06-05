@@ -4,10 +4,14 @@ $(document).ready(function () {
     //Make an empty array for the info
     var stationInfo = [];
 
-    getThemAll();
+    //
+    var openWeatherInfo = "img/weather/question.svg";
+
+    getWeatherStationInfo();
+    getOpenWeatherInfo();
 });
     //Get the weather station info
-    function getThemAll() {
+    function getWeatherStationInfo() {
         $.ajax({
             url: 'php/netatmo.php',
             dataType: 'json',
@@ -21,11 +25,10 @@ $(document).ready(function () {
     //Fill the empty array with info when there was a suc6
     function onSuccess(data) {
         stationInfo = data.stationInfo;
-        buildDivs();
+        buildDivsTemps();
     }
 
-    function buildDivs() {
-        console.log("buildTheDivs");
+    function buildDivsTemps() {
         var divs = '';
         if (typeof stationInfo === 'undefined'){
             divs = "Error loading";
@@ -41,6 +44,38 @@ $(document).ready(function () {
             divs += '&deg;C';
             divs += '</h4>';
         }
+
         $('#R1C3').html(divs);
-        // setInterval('getThemAll();', '600000');
+        setInterval('getWeatherStationInfo();', '600000');
     }
+
+function getOpenWeatherInfo() {
+    $.ajax({
+        url: 'php/openWeatherMap.php',
+        dataType: 'json',
+        success: onSuccessOpenWeatherMap,
+        error: function (err) {
+            console.log('Fout: ', err);
+        }
+    });
+}
+
+//Fill the empty string with info when there was a suc6
+function onSuccessOpenWeatherMap(data) {
+    openWeatherInfo = data.openWeatherInfo;
+    buildDivOpenWeather();
+}
+
+function buildDivOpenWeather() {
+    var divs = '';
+    if (typeof openWeatherInfo === 'undefined'){
+        divs = "Error loading";
+    } else {
+        divs = '<img src="' +
+            openWeatherInfo.svg +
+            '" class="w-50" alt="WeatherIcon"> ';
+    }
+
+    $('#R1C4').html(divs);
+    setInterval('getOpenWeatherInfo();', '600000');
+}
