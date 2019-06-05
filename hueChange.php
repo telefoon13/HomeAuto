@@ -7,7 +7,7 @@ if($on == "on"){
 } else {
     $on = false;
 }
-include_once ("php/hue.php");
+include_once("php/hue.php");
 $update = updateLight($id, $on,$color);
 if ($update == "200"){
     echo "OK";

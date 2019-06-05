@@ -1,5 +1,5 @@
 <?php
-include_once ("php/MainHelper.php");
+include_once("php/MainHelper.php");
 $return = switchSonOffLight($_GET['ip'], $_GET['port'], "");
 //Alles uit dan ook staande lamp
 if ($_GET['ip'] == "192.168.178.154" && $_GET['port'] == "2"){

@@ -1,5 +1,5 @@
 <?php
-include_once ("MainHelper.php");
+include_once("MainHelper.php");
 include_once(".secrets.php");
 $appname = $netatmo_Appname;
 $clientId = $netatmo_ClientId;

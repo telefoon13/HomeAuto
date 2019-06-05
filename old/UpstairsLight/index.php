@@ -36,25 +36,25 @@
 
     <div class="row" style="height: 200px">
         <div class="col-3 align-self-center text-center">
-            <a href="../SwitchLight/?IP=192.168.178.152&PORT=1&STATUS=ON&FROM=UpstairsLight&LIGHT=Julie%20room">
+            <a href="../SwitchLight?IP=192.168.178.152&PORT=1&STATUS=ON&FROM=UpstairsLight&LIGHT=Julie%20room">
                 <i style="font-size: 80px; " class="fas fa-bed"></i>
                 <h3>Julie room</h3>
             </a>
         </div>
         <div class="col-3 align-self-center text-center">
-            <a href="../SwitchLight/?IP=192.168.178.152&PORT=2&STATUS=ON&FROM=UpstairsLight&LIGHT=Guest%20room">
+            <a href="../SwitchLight?IP=192.168.178.152&PORT=2&STATUS=ON&FROM=UpstairsLight&LIGHT=Guest%20room">
                 <i style="font-size: 80px; " class="fas fa-suitcase"></i>
                 <h3>Guest room</h3>
             </a>
         </div>
         <div class="col-3 align-self-center text-center">
-            <a href="../SwitchLight/?IP=192.168.178.152&PORT=3&STATUS=ON&FROM=UpstairsLight&LIGHT=Stair%20way">
+            <a href="../SwitchLight?IP=192.168.178.152&PORT=3&STATUS=ON&FROM=UpstairsLight&LIGHT=Stair%20way">
                 <i style="font-size: 80px; " class="fas fa-sort-amount-up"></i>
                 <h3>Stair way</h3>
             </a>
         </div>
         <div class="col-3 align-self-center text-center">
-            <a href="../SwitchLight/?IP=192.168.178.152&PORT=4&STATUS=ON&FROM=UpstairsLight&LIGHT=Bathroom">
+            <a href="../SwitchLight?IP=192.168.178.152&PORT=4&STATUS=ON&FROM=UpstairsLight&LIGHT=Bathroom">
                 <i style="font-size: 80px; " class="fas fa-bath"></i>
                 <h3>Bathroom</h3>
             </a>
@@ -63,25 +63,25 @@
 
     <div class="row" style="height: 200px">
         <div class="col-3 align-self-center text-center">
-            <a href="../SwitchLight/?IP=192.168.178.153&PORT=1&STATUS=ON&FROM=UpstairsLight&LIGHT=Mirror%20bathroom">
+            <a href="../SwitchLight?IP=192.168.178.153&PORT=1&STATUS=ON&FROM=UpstairsLight&LIGHT=Mirror%20bathroom">
                 <i style="font-size: 80px; " class="fas fa-tooth"></i>
                 <h3>Mirror bathroom</h3>
             </a>
         </div>
         <div class="col-3 align-self-center text-center">
-            <a href="../SwitchLight/?IP=192.168.178.153&PORT=2&STATUS=ON&FROM=UpstairsLight&LIGHT=Desk">
+            <a href="../SwitchLight?IP=192.168.178.153&PORT=2&STATUS=ON&FROM=UpstairsLight&LIGHT=Desk">
                 <i style="font-size: 80px; " class="fas fa-keyboard"></i>
                 <h3>Desk</h3>
             </a>
         </div>
         <div class="col-3 align-self-center text-center">
-            <a href="../SwitchLight/?IP=192.168.178.153&PORT=3&STATUS=ON&FROM=UpstairsLight&LIGHT=Master%20bedroom">
+            <a href="../SwitchLight?IP=192.168.178.153&PORT=3&STATUS=ON&FROM=UpstairsLight&LIGHT=Master%20bedroom">
                 <i style="font-size: 80px; " class="fas fa-bed"></i>
                 <h3>Master bedroom</h3>
             </a>
         </div>
         <div class="col-3 align-self-center text-center">
-            <a href="../SwitchLight/?IP=192.168.178.153&PORT=4&STATUS=ON&FROM=UpstairsLight&LIGHT=Dressing">
+            <a href="../SwitchLight?IP=192.168.178.153&PORT=4&STATUS=ON&FROM=UpstairsLight&LIGHT=Dressing">
                 <i style="font-size: 80px; " class="fas fa-tshirt"></i>
                 <h3>Dressing</h3>
             </a>

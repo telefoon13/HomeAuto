@@ -1,5 +1,5 @@
 <?php
-include_once ("MainHelper.php");
+include_once("MainHelper.php");
 include_once(".secrets.php");
 $user = $hue_User;
 $baseUrl = "http://192.168.178.157/api/".$user;

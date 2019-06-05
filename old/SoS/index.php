@@ -53,7 +53,7 @@
 //First load the page before running PHP
 ob_flush();
 flush();
-include_once ("../Helpers/LightSwitch.php");
+include_once("../Helpers/LightSwitch.php");
 
 function BlinkLights(){
     LightSwitch::switchLight("192.168.178.152", 1, "ON", false);

@@ -13,7 +13,7 @@
 </head>
 <body>
 <?php
-    include_once ("php/MainHelper.php");
+    include_once("php/MainHelper.php");
     //Check if there is a page request
     if (!checkFilled($_GET['page'])) {
         $page = 'home';

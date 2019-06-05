@@ -62,7 +62,7 @@
         </div>
     </div>
     <?php
-    include_once ("../Helpers/GetPOW.php");
+    include_once("../Helpers/GetPOW.php");
     ?>
     <div class="row"  style="height: 200px">
         <div class="col-3 align-self-center  text-center">

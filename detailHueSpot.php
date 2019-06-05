@@ -1,6 +1,6 @@
 <?php
-include_once ("php/MainHelper.php");
-include_once ("php/hue.php");
+include_once("php/MainHelper.php");
+include_once("php/hue.php");
 if (!checkFilled($_GET["id"])){
     header('Location: index.php');
 }

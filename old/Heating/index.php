@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css.css">
+    <link rel="stylesheet" href="../../css.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -35,7 +35,7 @@
     </div>
 
     <?php
-    include_once ("../Helpers/Vaillant.php");
+    include_once("../Helpers/Vaillant.php");
 
     $devices = Vaillant::getAllDevices();
 
@@ -67,7 +67,7 @@
                 echo $beginMelding."clock".$eindMelding;
             }
             ?>
-            <a href="Valve/?room=<?php echo $devices[$id]["roomIndex"]; ?>" style="<?php iconColor($devices[$id]['operationMode']); ?>">
+            <a href="Valve?room=<?php echo $devices[$id][" style="<?php iconColor($devices[$id]['operationMode']); ?>">
                 <i style="font-size: 80px;" class="fas fa-<?php echo $devices[$id]["icon"]; ?>"></i>
                 <h3><?php echo $devices[$id]["name"]; ?></h3>
                 <h3><?php echo $devices[$id]["currentTemperature"]." / ".$devices[$id]["temperatureSetpoint"]?>&deg;C</h3>

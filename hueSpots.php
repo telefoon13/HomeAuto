@@ -1,5 +1,5 @@
 <?php
-include_once ("php/hue.php");
+include_once("php/hue.php");
 function buildSpotIcon($id){
     $spot = getLightInfo($id);
     if ($spot['on']){

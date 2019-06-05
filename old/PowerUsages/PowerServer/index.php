@@ -19,7 +19,7 @@ include_once ("../../Helpers/GetPOW.php");
 <div class="container-fluid">
     <div class="row" style="height: 200px">
         <div class="col-3 align-self-center text-center">
-            <a href="../../PowerUsages">
+            <a href="..">
                 <i style="font-size: 80px; " class="fas fa-arrow-left"></i>
                 <h3>Back</h3>
             </a>
