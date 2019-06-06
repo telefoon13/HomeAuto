@@ -1,0 +1,35 @@
+╔==================╗
+║     SOFTWARE     ║
+╚==================╝
+- Kleuren correct maken ivm HUE
+- Groepen bij HUE
+- Lokaal opslaan van Temps en maar om de X aantal tijd deze laten aanpassen met curl
+- Temp oAuth token oplsaan ipv steeds opvragen
+- Alles uit ook hue lampen intigreren
+- Alles aan ook hue + staande lamp
+- Weer pagina opbouwen
+    - Alle netatmo stats
+    - Alle openweather stats (Non overlappend met Netatmo)
+- SoS maken
+    - Alles aan 5sec -> Alles uit 5 sec (Loop)
+    - Via sip bellen of sms'en
+    - Hue buiten blauw/rood knipperen
+- Exit pagina
+    - Na 1 min alles uit
+    - Signaal voor recording camera's ???
+    - Ook terug thuis pagina
+- Indien op niet index pagina na vb 30 sec terug naar index pagina gaan (Behalve bij camera full screen)
+- Verbruik pagina intigreren
+- Verwarming overzetten van oud systeem naar nieuw
+- DB aanmaken + intigreren
+    - Logging
+    - Verbruik bij houden
+
+╔==================╗
+║     HARDWARE     ║
+╚==================╝
+- Camera's voor verbruik klaar maken
+    - Case bouwen
+    - Printplaat + voeding maken
+- Case voor touchscreen maken
+- Apparte VM opzetten voor Software

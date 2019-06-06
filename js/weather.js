@@ -46,7 +46,7 @@ $(document).ready(function () {
         }
 
         $('#R1C3').html(divs);
-        setInterval('getWeatherStationInfo();', '600000');
+        //setInterval('getWeatherStationInfo();', '600000');
     }
 
 function getOpenWeatherInfo() {
@@ -69,7 +69,7 @@ function onSuccessOpenWeatherMap(data) {
 function buildDivOpenWeather() {
     var divs = '';
     if (typeof openWeatherInfo === 'undefined'){
-        divs = "Error loading";
+        divs = "<img alt=\"Question\" src=\"img/weather/question.svg\" class=\"w-50\">";
     } else {
         divs = '<img src="' +
             openWeatherInfo.svg +
@@ -77,5 +77,5 @@ function buildDivOpenWeather() {
     }
 
     $('#R1C4').html(divs);
-    setInterval('getOpenWeatherInfo();', '600000');
+    //setInterval('getOpenWeatherInfo();', '600000');
 }

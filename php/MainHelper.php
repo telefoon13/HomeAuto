@@ -73,14 +73,43 @@ function cUrl($url,$method = "GET",$body = null, $useCookie=false, $header = nul
     $httpCode = curl_getinfo($cUrl, CURLINFO_HTTP_CODE);
     //The return
     $cUrlReturn = json_decode($cUrlReturn,true);
-    //debug_to_console($url.$method.$body.$httpCode);
+    //debug_to_console(getUserIP());
     return array($httpCode,$cUrlReturn);
 }
+
 
 function debug_to_console( $data ) {
     $output = $data;
     if ( is_array( $output ) )
         $output = implode( ',', $output);
 
-    echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
+    echo "<script>console.log( '" . $output . "' );</script>";
+}
+
+// Source : https://stackoverflow.com/questions/13646690/how-to-get-real-ip-from-visitor
+function getUserIP()
+{
+    // Get real visitor IP behind CloudFlare network
+    if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+        $_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
+        $_SERVER['HTTP_CLIENT_IP'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
+    }
+    $client  = @$_SERVER['HTTP_CLIENT_IP'];
+    $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+    $remote  = $_SERVER['REMOTE_ADDR'];
+
+    if(filter_var($client, FILTER_VALIDATE_IP))
+    {
+        $ip = $client;
+    }
+    elseif(filter_var($forward, FILTER_VALIDATE_IP))
+    {
+        $ip = $forward;
+    }
+    else
+    {
+        $ip = $remote;
+    }
+
+    return $ip;
 }
