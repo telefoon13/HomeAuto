@@ -73,7 +73,14 @@ function cUrl($url,$method = "GET",$body = null, $useCookie=false, $header = nul
     $httpCode = curl_getinfo($cUrl, CURLINFO_HTTP_CODE);
     //The return
     $cUrlReturn = json_decode($cUrlReturn,true);
-    //debug_to_console(getUserIP());
+
+    if(!fnmatch("*openweathermap*",$url) && !fnmatch("*netatmo*",$url)){
+        $log = new Logger("/tmp/HomeAutoLog.txt");
+        $log->setTimestamp("d/m/Y H:i");
+        $log->putLog("Curl : " . $url . " , by : <b>". getUserIP() . "</b><br>");
+    }
+
+    //$log->getLog();
     return array($httpCode,$cUrlReturn);
 }
 
@@ -112,4 +119,34 @@ function getUserIP()
     }
 
     return $ip;
+}
+
+// Source : https://stackoverflow.com/questions/24972424/create-or-write-append-in-text-file
+class Logger {
+
+    private
+        $file,
+        $timestamp;
+
+    public function __construct($filename) {
+        $this->file = $filename;
+    }
+
+    public function setTimestamp($format) {
+        $this->timestamp = date($format)." &raquo; ";
+    }
+
+    public function putLog($insert) {
+        if (isset($this->timestamp)) {
+            file_put_contents($this->file, $this->timestamp.$insert."<br>", FILE_APPEND);
+        } else {
+            trigger_error("Timestamp not set", E_USER_ERROR);
+        }
+    }
+
+    public function getLog() {
+        $content = @file_get_contents($this->file);
+        return $content;
+    }
+
 }
