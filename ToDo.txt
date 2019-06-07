@@ -5,8 +5,8 @@
 V Groepen bij HUE
 - Lokaal opslaan van Temps en maar om de X aantal tijd deze laten aanpassen met curl
 - Temp oAuth token oplsaan ipv steeds opvragen
-- Alles uit ook hue lampen intigreren
-- Alles aan ook hue + staande lamp
+V Alles uit ook hue lampen intigreren
+V Alles aan ook hue + staande lamp
 - Weer pagina opbouwen
     - Alle netatmo stats
     - Alle openweather stats (Non overlappend met Netatmo)
