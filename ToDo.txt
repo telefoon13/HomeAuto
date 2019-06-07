@@ -2,7 +2,7 @@
 ║     SOFTWARE     ║
 ╚==================╝
 - Kleuren correct maken ivm HUE
-- Groepen bij HUE
+V Groepen bij HUE
 - Lokaal opslaan van Temps en maar om de X aantal tijd deze laten aanpassen met curl
 - Temp oAuth token oplsaan ipv steeds opvragen
 - Alles uit ook hue lampen intigreren
@@ -33,3 +33,5 @@
     - Printplaat + voeding maken
 - Case voor touchscreen maken
 - Apparte VM opzetten voor Software
+- Deurbel
+- Alarm

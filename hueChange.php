@@ -1,14 +1,25 @@
 <?php
+include_once("php/hue.php");
+
 $on = $_POST['onoffswitch'];
-$id = $_POST['spotId'];
+$update = 600;
 if($on == "on"){
     $on = true;
     $color = $_POST['color'];
 } else {
     $on = false;
 }
-include_once("php/hue.php");
-$update = updateLight($id, $on,$color);
+
+if (checkFilled($_POST['spotId'])){
+	$id = $_POST['spotId'];
+	$update = updateLight($id,$on,$color);
+} elseif (checkFilled($_POST['groupId'])){
+	$id = $_POST['groupId'];
+	$update = updateGroup($id,$on,$color);
+} else {
+	header('Location: index.php');
+}
+
 if ($update == "200"){
     echo "OK";
     header('Location: index.php?page=hueSpots');

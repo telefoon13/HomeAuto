@@ -3,12 +3,13 @@ include_once("MainHelper.php");
 include_once(".secrets.php");
 $user = $hue_User;
 $baseUrl = "http://192.168.178.157/api/".$user;
-$getLight = $baseUrl."/lights/";
+$getLightUrl = $baseUrl."/lights/";
+$getGroupUrl = $baseUrl."/groups/";
 
 //Function to get info from a light
 function getLightInfo($id){
-    global $getLight;
-    $result = cUrl($getLight.$id);
+    global $getLightUrl;
+    $result = cUrl($getLightUrl.$id);
     if ($result[0] == "200"){
         $values = $result[1];
         $lightInfo = array(
@@ -30,7 +31,7 @@ function getLightInfo($id){
 }
 
 function updateLight($id, $state, $RGB = null){
-    global $getLight;
+    global $getLightUrl;
     //Body to send in PUT
     $body = array(
         "on" => $state
@@ -44,12 +45,57 @@ function updateLight($id, $state, $RGB = null){
     //Encode body in JSON
     $bodyJSON = json_encode($body);
     //Complete URL
-    $fullURL = $getLight.$id."/state";
+    $fullURL = $getLightUrl.$id."/state";
     //Do the call
     $call = cUrl($fullURL, "PUT", $bodyJSON);
     return $call[0];
 }
 
+//Function to get info from a light
+function getGroupInfo($id){
+	global $getGroupUrl;
+	$result = cUrl($getGroupUrl.$id);
+	if ($result[0] == "200"){
+		$values = $result[1];
+		$groupInfo = array(
+			"on" => $values['action']['on'],
+			"bri" => $values['action']['bri'],
+			"hue" => $values['action']['hue'],
+			"sat" => $values['action']['sat'],
+			"effect" => $values['action']['effect'],
+			"x" => $values['action']['xy'][0],
+			"y" => $values['action']['xy'][1],
+			"rgb" => xyBriToRgb($values['action']['xy'][0],$values['action']['xy'][1],$values['action']['bri']),
+			"lights" => $values['lights'],
+			"any_on" => $values['state']['any_on'],
+			"all_on" => $values['state']['all_on'],
+		);
+		return $groupInfo;
+	} else {
+		return $result[0];
+	}
+}
+
+function updateGroup($id, $state, $RGB = null){
+	global $getGroupUrl;
+	//Body to send in PUT
+	$body = array(
+		"on" => $state
+	);
+	if (checkFilled($RGB)){
+		$xybri = rgbToXyBri($RGB);
+		$xy = array($xybri["x"],$xybri["y"]);
+		$body["xy"] = $xy;
+		//$body["bri"] = $xybri["bri"];
+	}
+	//Encode body in JSON
+	$bodyJSON = json_encode($body);
+	//Complete URL
+	$fullURL = $getGroupUrl.$id."/action";
+	//Do the call
+	$call = cUrl($fullURL, "PUT", $bodyJSON);
+	return $call[0];
+}
 
 
 //Function to convert the x,y and bri to a HEX color

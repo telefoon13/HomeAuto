@@ -1,19 +1,30 @@
+<form method="post" action="hueChange.php">
 <?php
 include_once("php/MainHelper.php");
 include_once("php/hue.php");
-if (!checkFilled($_GET["id"])){
-    header('Location: index.php');
+$color = "#FFFFFF";
+$state = false;
+if (checkFilled($_GET["id"])){
+	$spot = getLightInfo($_GET["id"]);
+	$color = $spot['rgb'];
+	echo "<input type=\"hidden\" id=\"spotId\" name=\"spotId\" value=\"". $_GET["id"]."\">";
+	$state = $spot['on'];
+} elseif (checkFilled($_GET["group"])){
+	$group = getGroupInfo($_GET["group"]);
+	$color = $group['rgb'];
+	echo "<input type=\"hidden\" id=\"groupId\" name=\"groupId\" value=\"". $_GET["group"]."\">";
+	$state = $group['on'];
+} else {
+	header('Location: index.php');
 }
-$spot = getLightInfo($_GET["id"]);
+
 
 ?>
 <script src="js/html5kellycolorpicker.js"></script>
-<form method="post" action="hueChange.php">
-    <input type="hidden" id="spotId" name="spotId" value="<?= $_GET["id"]; ?>">
 <div class="row" id="R2">
     <div class="col-sm-6 col-12 align-self-center text-center" id="R2C1">
         <canvas id="picker"></canvas><br>
-        <input type="hidden" id="color" value="<?= $spot['rgb']; ?>" name="color">
+        <input type="hidden" id="color" value="<?= $color; ?>" name="color">
         <script>
             new KellyColorPicker({
                 place : 'picker',
@@ -25,7 +36,7 @@ $spot = getLightInfo($_GET["id"]);
     <div class="col-sm-6 col-12 align-self-center text-center" id="R2C2">
         <!-- https://proto.io/freebies/onoff/ -->
         <div class="onoffswitch">
-            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" <?= ($spot['on']) ? "checked" : "" ?>>
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" <?= ($state) ? "checked" : "" ?>>
             <label class="onoffswitch-label" for="myonoffswitch">
                 <span class="onoffswitch-inner"></span>
                 <span class="onoffswitch-switch"></span>
