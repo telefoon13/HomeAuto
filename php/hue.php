@@ -97,6 +97,50 @@ function updateGroup($id, $state, $RGB = null){
 	return $call[0];
 }
 
+function knightRider(){
+	$red = "#FF0000";
+	updateGroup("1", false);
+
+	updateLight("1", true, $red);
+	usleep(500000);
+	updateLight("1", false, $red);
+	updateLight("2", true, $red);
+	usleep(500000);
+	updateLight("2", false, $red);
+	updateLight("3", true, $red);
+	usleep(500000);
+	updateLight("3", false, $red);
+	updateLight("4", true, $red);
+	usleep(500000);
+	updateLight("4", false, $red);
+	updateLight("5", true, $red);
+	usleep(500000);
+	updateLight("5", false, $red);
+	updateLight("6", true, $red);
+	usleep(500000);
+	updateLight("6", false, $red);
+	usleep(500000);
+	updateLight("6", true, $red);
+	usleep(500000);
+	updateLight("6", false, $red);
+	updateLight("5", true, $red);
+	usleep(500000);
+	updateLight("5", false, $red);
+	updateLight("4", true, $red);
+	usleep(500000);
+	updateLight("4", false, $red);
+	updateLight("3", true, $red);
+	usleep(500000);
+	updateLight("3", false, $red);
+	updateLight("2", true, $red);
+	usleep(500000);
+	updateLight("2", false, $red);
+	updateLight("1", true, $red);
+	usleep(500000);
+	updateLight("1", false, $red);
+	usleep(500000);
+}
+
 
 //Function to convert the x,y and bri to a HEX color
 //Source : https://stackoverflow.com/questions/22894498/philips-hue-convert-xy-from-api-to-hex-or-rgb

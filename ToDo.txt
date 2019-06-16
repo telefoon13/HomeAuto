@@ -35,3 +35,4 @@ V Alles aan ook hue + staande lamp
 - Apparte VM opzetten voor Software
 - Deurbel
 - Alarm
+- Brightness scherm + uitschakelen scherm na verloop van tijd

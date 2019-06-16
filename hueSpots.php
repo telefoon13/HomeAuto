@@ -68,7 +68,10 @@ function buildSVG($color, $name){
         </a>
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R3C2">
-        &emsp;
+        <a href="index.php?page=hueKnightRider">
+            <img src="img/downStairs/spotlights.svg" alt="spotlights" class="w-75">
+            <h5>Knight Rider</h5>
+        </a>
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R3C3">
         &emsp;

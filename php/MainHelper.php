@@ -77,7 +77,11 @@ function cUrl($url,$method = "GET",$body = null, $useCookie=false, $header = nul
     if(!fnmatch("*openweathermap*",$url) && !fnmatch("*netatmo*",$url)){
         $log = new Logger("/tmp/HomeAutoLog.txt");
         $log->setTimestamp("d/m/Y H:i:s");
-        $log->putLog("Curl : " . $url . " , by : <b>". getUserIP() . "</b><br>");
+        $log->putLog(
+        	"URL : ".$url.
+			"<br>By : <b>".getUserIP()."</b>
+			<br>Return : ".$httpCode.
+			"<br>Body : ".$body);
     }
 
     //$log->getLog();
@@ -133,7 +137,7 @@ class Logger {
     }
 
     public function setTimestamp($format) {
-        $this->timestamp = date($format)." &raquo; ";
+        $this->timestamp = date($format)." &raquo; <br>";
     }
 
     public function putLog($insert) {

@@ -23,8 +23,6 @@
                 document.body.style.backgroundColor = "blue";
             }
         }
-
-
     </script>
 </head>
 <body>
