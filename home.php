@@ -30,7 +30,10 @@
         </a>
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R2C6">
-        &emsp;
+        <a href="index.php?page=window">
+            <img src="img/window.svg" alt="window" class="w-75">
+            <h5>Rolluiken</h5>
+        </a>
     </div>
 </div>
 <div class="row" id="R3">
