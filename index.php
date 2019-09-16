@@ -31,7 +31,7 @@
 <div class="container-fluid">
     <?php
     //Dont show menu whem large view camera
-    if (empty($_GET['camid'])) {
+    if (empty($_GET['camid']) && $page != "3dprinter") {
 		?>
         <div class="row" id="R1">
             <div class="col-sm-2 col-6 align-self-center text-center" id="R1C1">

@@ -44,7 +44,10 @@
         </a>
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R3C2">
-        &emsp;
+        <a href="index.php?page=3dprinter">
+            <img src="img/3d-printer.svg" alt="3dPrinter" class="w-75">
+            <h5>3D printer</h5>
+        </a>
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R3C3">
         &emsp;

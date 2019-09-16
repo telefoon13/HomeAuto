@@ -36,11 +36,13 @@ if ($_GET['camid'] == null || empty($_GET['camid'])){
 } else {
 ?>
     <div class="row" id="R2">
-        <div class="col-6 align-self-center text-center" id="R2C1" style="padding-top: 11px; padding-left: 0">
-            <a href="index.php?page=camera">
+        <div class="col-12 align-self-center text-center" id="R2C1" style="padding-top: 11px; padding-left: 0">
+            <a href="index.php">
                 <img width="1024px" height="578px" src="
             http://192.168.178.204/cgi-bin/nph-zms?mode=jpeg&monitor=<?= $_GET['camid']; ?>&scale=100&maxfps=30&buffer=1000&user=viewer&pass=viewer
             " ></a>
+
         </div>
+    </div>
 <?php
 }
