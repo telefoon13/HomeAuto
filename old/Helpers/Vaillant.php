@@ -7,7 +7,7 @@ class Vaillant
     private $baseURL = "https://smart.vaillant.com/mobile/api/v4/";
     private $smartphoneId = "HomeAutoMike1";
     private $username = "mikedhoore";
-    private $password = "****";
+    private $password = "***";
     private $CookieJar = "/tmp/Vaillant_cookie.txt";
 
 

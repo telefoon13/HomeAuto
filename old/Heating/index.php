@@ -67,7 +67,7 @@
                 echo $beginMelding."clock".$eindMelding;
             }
             ?>
-            <a href="Valve?room=<?php echo $devices[$id][" style="<?php iconColor($devices[$id]['operationMode']); ?>">
+            <a href="Valve?room=<?php echo $devices[$id]['roomIndex']; ?>" style="<?php echo iconColor($devices[$id]['operationMode']); ?>">
                 <i style="font-size: 80px;" class="fas fa-<?php echo $devices[$id]["icon"]; ?>"></i>
                 <h3><?php echo $devices[$id]["name"]; ?></h3>
                 <h3><?php echo $devices[$id]["currentTemperature"]." / ".$devices[$id]["temperatureSetpoint"]?>&deg;C</h3>
