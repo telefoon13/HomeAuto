@@ -62,11 +62,11 @@ function cUrl($url,$method = "GET",$body = null, $useCookie=false, $header = nul
     //Setup the URL to go to
     curl_setopt($cUrl, CURLOPT_URL, $url);
     //Setup the cookieJar & File
-    if ($useCookie){
+    //if ($useCookie){
         $CookieJar = "/tmp/HomeAuto_cookieJar.txt";
         curl_setopt($cUrl, CURLOPT_COOKIEJAR, $CookieJar);
         curl_setopt($cUrl, CURLOPT_COOKIEFILE, $CookieJar);
-    }
+    //}
     //Execute the cUrl
     $cUrlReturn = curl_exec($cUrl);
     //Get the HTTP response Code

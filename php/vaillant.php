@@ -6,7 +6,6 @@ include_once(".secrets.php");
 $smartphoneId = $vaillant_SmartphoneId;
 $username = $vaillant_Username;
 $password = $vaillant_Password ;
-$CookieJar = $vaillant_CookieJar;
 $serialnumber = $vaillant_Serialnumber;
 //URL's used
 $baseURL = "https://smart.vaillant.com/mobile/api/v4/";

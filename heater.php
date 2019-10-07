@@ -1,21 +1,54 @@
+<head>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
 <?php
 include_once("php/vaillant.php");
-//$test = getMainSystemInfo();
-//echo $test["serialNumber"];
+//Get all the devices
+$devices = getAllDevices();
+
+//Function to get one device from the array of all devices
 function getDevice($deviceId){
-$device = getOneDevice($deviceId);
-if ($device == "401"){
-	return "Error 401";
-} else {
-	$theReturn = '<a href="index.php?page=heaterDetail&heaterid='.$device['roomIndex'].'">'.
+	//Get All devices
+	global $devices;
+	//Select the device from Array
+	$device = $devices[$deviceId];
+
+	//If there is an error add an red icon
+	$beginMelding = "<div class=\"meldingValve\"><i class=\"fas fa-";
+	$eindMelding = "\"></i></div>";
+	if($devices[$deviceId]["isWindowOpen"]){
+		echo $beginMelding."wind".$eindMelding;
+	}else if($devices[$deviceId]["isBatteryLow"]){
+		echo $beginMelding."battery-quarter".$eindMelding;
+	}else if($devices[$deviceId]["isRadioOutOfReach"]){
+		echo $beginMelding."signal".$eindMelding;
+	} elseif ($devices[$deviceId]["remainingQuickVeto"] != null){
+		echo $beginMelding."clock".$eindMelding;
+	}
+
+	//Build the Icon & text to show
+	$theReturn = '<a href="index.php?page=heaterDetail&heaterid='.$device['roomIndex'].'" style="'.iconColor($device["operationMode"]).'">'.
 		'<img src="img/'.$device["icon"].'.svg" alt="'.$device["icon"].'" class="w-75">'.
 		'<h5>'.$device["name"].'</h5>'.
 		'<h5>'.$device["currentTemperature"].' / '.$device["temperatureSetpoint"].'°C</h5>'.
 		'</a>';
 
 	return $theReturn;
+
 }
+
+//Function to set the text color
+function iconColor($deviceOperationMode){
+	switch ($deviceOperationMode) {
+		case "OFF":
+			return "color:gray;";
+			break;
+		case "MANUAL":
+			return "color:goldenrod;";
+			break;
+	}
 }
+
 ?>
 <div class="row" id="R2">
 	<div class="col-sm-2 col-6 align-self-center text-center" id="R2C1">
