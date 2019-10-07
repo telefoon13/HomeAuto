@@ -202,8 +202,7 @@ class Vaillant
                     "isWindowOpen"=>$call[1]["body"]["configuration"]["isWindowOpen"],
                     "isBatteryLow"=>$call[1]["body"]["configuration"]["devices"][0]["isBatteryLow"],
                     "isRadioOutOfReach"=>$call[1]["body"]["configuration"]["devices"][0]["isRadioOutOfReach"],
-                    "remainingQuickVeto"=>$call[1]["body"]["configuration"]["quickVeto"]["remainingDuration"],
-                    "icon"=>self::iconForValve($call[1]["body"]["roomIndex"])
+                    "remainingQuickVeto"=>$call[1]["body"]["configuration"]["quickVeto"]["remainingDuration"]
                 );
             return $device;
         } else {

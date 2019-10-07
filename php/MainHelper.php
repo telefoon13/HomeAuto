@@ -74,7 +74,9 @@ function cUrl($url,$method = "GET",$body = null, $useCookie=false, $header = nul
     //The return
     $cUrlReturn = json_decode($cUrlReturn,true);
 
-    if(!fnmatch("*openweathermap*",$url) && !fnmatch("*netatmo*",$url)){
+/*Logging of al curl commands
+if(!fnmatch("*openweathermap*",$url) && !fnmatch("*netatmo*",$url)){
+
         $log = new Logger("/tmp/HomeAutoLog.txt");
         $log->setTimestamp("d/m/Y H:i:s");
         $log->putLog(
@@ -82,9 +84,11 @@ function cUrl($url,$method = "GET",$body = null, $useCookie=false, $header = nul
 			"<br>By : <b>".getUserIP()."</b>
 			<br>Return : ".$httpCode.
 			"<br>Body : ".$body);
-    }
+	//debug_to_console($url.$method.$httpCode);
+    }*/
 
     //$log->getLog();
+
     return array($httpCode,$cUrlReturn);
 }
 
