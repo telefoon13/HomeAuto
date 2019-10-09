@@ -214,6 +214,90 @@ function getOneDevice($roomID){
 	}
 }
 
+function changeOperationMode($roomID, $operationMode){
+	global $facilitiesRooms;
+	//Check if isLogged in and else login
+	if (!isLoggedIn()) {
+		login();
+	}
+	//Body to send in PUT
+	$body = array(
+		"operationMode" => $operationMode
+	);
+	//Encode body in JSON
+	$bodyJSON = json_encode($body);
+	//Complete URL
+	$callChangeOperationMode = $facilitiesRooms.$roomID."/configuration/operationMode";
+	//Do the call
+	$call = cUrl($callChangeOperationMode, "PUT", $bodyJSON, true);
+	return $call[0];
+}
+
+function setBoostToValve($roomID, $temp, $time){
+	global $facilitiesRooms;
+	//Check if isLogged in and else login
+	if (!isLoggedIn()) {
+		login();
+	}
+	//Body to send in PUT
+	$body = array(
+		"temperatureSetpoint" => $temp,
+		"duration"=> $time
+	);
+	//Encode body in JSON
+	$bodyJSON = json_encode($body,JSON_NUMERIC_CHECK);
+	//Complete URL
+	$callsetBoostToValve = $facilitiesRooms.$roomID."/configuration/quickVeto";
+	//Do the call
+	$call = cUrl($callsetBoostToValve, "PUT", $bodyJSON, true);
+	return $call[0];
+}
+
+function setManualTempValve($roomID, $temp){
+	global $facilitiesRooms;
+	//Check if isLogged in and else login
+	if (!isLoggedIn()) {
+		login();
+	}
+	//Body to send in PUT
+	$body = array(
+		"temperatureSetpoint" => $temp
+	);
+	//Encode body in JSON
+	$bodyJSON = json_encode($body,JSON_NUMERIC_CHECK);
+	//Complete URL
+	$callsetManualTempValve = $facilitiesRooms.$roomID."/configuration/temperatureSetpoint";
+	//Do the call
+	$call = cUrl($callsetManualTempValve, "PUT", $bodyJSON, true);
+	return $call[0];
+}
+
+function changechildLock($roomID, $childLock){
+	global $facilitiesRooms;
+	//Check if isLogged in and else login
+	if (!isLoggedIn()) {
+		login();
+	}
+	//Body to send in PUT
+	$body = array(
+		"childLock" => $childLock
+	);
+	//Encode body in JSON
+	$bodyJSON = json_encode($body);
+
+	//Complete URL
+	$callchangechildLock = $facilitiesRooms.$roomID."/configuration/childLock";
+	//Do the call
+	$call = cUrl($callchangechildLock, "PUT", $bodyJSON,true);
+	return $call[0];
+}
+
+
+//------------------------------------//
+//         Universal functions        //
+//------------------------------------//
+
+
 function getDeviceIcon($deviceId){
 	$icon = "";
 	switch ($deviceId){
@@ -244,8 +328,4 @@ function getDeviceIcon($deviceId){
 	}
 	return $icon;
 }
-//------------------------------------//
-//         Universal functions        //
-//------------------------------------//
-
 ?>
