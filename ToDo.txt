@@ -20,7 +20,7 @@ V Alles aan ook hue + staande lamp
     - Ook terug thuis pagina
 - Indien op niet index pagina na vb 30 sec terug naar index pagina gaan (Behalve bij camera full screen)
 - Verbruik pagina intigreren
-- Verwarming overzetten van oud systeem naar nieuw
+V Verwarming overzetten van oud systeem naar nieuw
 - DB aanmaken + intigreren
     - Logging
     - Verbruik bij houden
