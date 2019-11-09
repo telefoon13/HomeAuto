@@ -7,4 +7,6 @@ For the security camera's i use Hikvision camera's & a Zoominder server to save 
 For the heating i use Vaillaint with a VR920 module & there non so public API.<br>
 For the weather & temp i use Netatmo weather station (In and out) also openweather to show the icons.<br>
 <br>
-Feel free to use what i made but please let me know juist out of intrest :)
+Feel free to use what i made but please let me know juist out of intrest :)<br>
+<br>
+Blog : <a href="https://blog.mikedhoore.be/index.php?page=posts&category=25">blog.mikedhoore.be</a>
