@@ -12,27 +12,27 @@
         </a>
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R2C3">
-        <a href="index.php?page=usage">
-            <img src="img/meter.svg" alt="meter" class="w-75">
-            <h5>Verbruik</h5>
-        </a>
-    </div>
-    <div class="col-sm-2 col-6 align-self-center text-center" id="R2C4">
-        <a href="index.php?page=camera">
-            <img src="img/cctv.svg" alt="cctv" class="w-75">
-            <h5>Camera's</h5>
-        </a>
-    </div>
-    <div class="col-sm-2 col-6 align-self-center text-center" id="R2C5">
         <a href="index.php?page=heater">
             <img src="img/heater.svg" alt="heater" class="w-75">
             <h5>Verwarming</h5>
         </a>
     </div>
-    <div class="col-sm-2 col-6 align-self-center text-center" id="R2C6">
+    <div class="col-sm-2 col-6 align-self-center text-center" id="R2C4">
         <a href="index.php?page=window">
             <img src="img/window.svg" alt="window" class="w-75">
             <h5>Rolluiken</h5>
+        </a>
+    </div>
+    <div class="col-sm-2 col-6 align-self-center text-center" id="R2C5">
+        <a href="index.php?page=camera">
+            <img src="img/cctv.svg" alt="cctv" class="w-75">
+            <h5>Camera's</h5>
+        </a>
+    </div>
+    <div class="col-sm-2 col-6 align-self-center text-center" id="R2C6">
+        <a href="index.php?page=usage">
+            <img src="img/meter.svg" alt="meter" class="w-75">
+            <h5>Verbruik</h5>
         </a>
     </div>
 </div>
