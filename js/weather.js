@@ -33,16 +33,10 @@ $(document).ready(function () {
         if (typeof stationInfo === 'undefined'){
             divs = "Error loading";
         } else {
-            divs += '<h4>';
-            divs += '<img src="img/weather/inside.svg" width="23px" alt="inside"> ';
-            divs += stationInfo.temperature.toFixed(1);
-            divs += '&deg;C';
-            divs += '</h4>';
-            divs += '<h4>';
-            divs += '<img src="img/weather/outside.svg" width="23px" alt="inside"> ';
+            divs += '<h2>';
             divs += stationInfo.temperature_OUT.toFixed(1);
             divs += '&deg;C';
-            divs += '</h4>';
+            divs += '</h2>';
         }
 
         $('#R1C3').html(divs);

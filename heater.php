@@ -3,6 +3,7 @@
 </head>
 <?php
 include_once("php/vaillant.php");
+
 //Get all the devices
 $devices = getAllDevices();
 
@@ -103,6 +104,8 @@ function iconColor($deviceOperationMode){
 		&emsp;
 	</div>
 	<div class="col-sm-2 col-6 align-self-center text-center" id="R3C6">
-		&emsp;
+        <a href="index.php?page=heaterInfo">
+            <img src="img/info.svg" alt="info" class="w-50">
+        </a>
 	</div>
 </div>
