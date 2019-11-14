@@ -20,7 +20,7 @@ function checkIndexUrl($input)
     }
 }
 
-//Function to swhitch the SonOff lights
+//Function to switch the SonOff lights
 function switchSonOffLight($ip, $port, $state){
     if (!checkFilled($state)){
         $state = "TOGGLE";
@@ -28,6 +28,27 @@ function switchSonOffLight($ip, $port, $state){
     $url = "http://".$ip."/cm?cmnd=Power".$port."%20".$state;
     $result = cUrl($url);
     return $result[0];
+}
+
+//Function to get stats of a SonOff pOW module
+function getPOW($IP){
+	$url = "http://".$IP."/cm?cmnd=Status%208";
+	$call = cUrl($url);
+	if ($call[0] == "200") {
+		$values = $call[1];
+		$info = array(
+			"voltage" => $values['StatusSNS']['ENERGY']['Voltage'],
+			"Current" => $values['StatusSNS']['ENERGY']['Current'],
+			"Power" => $values['StatusSNS']['ENERGY']['Power'],
+			"Factor" => $values['StatusSNS']['ENERGY']['Factor'],
+			"Today" => $values['StatusSNS']['ENERGY']['Today'],
+			"Yesterday" => $values['StatusSNS']['ENERGY']['Yesterday'],
+			"Total" => $values['StatusSNS']['ENERGY']['Total']
+		);
+		return $info;
+	}else {
+		return $call[0];
+	}
 }
 
 //Universal cUrl method to do the API calls
