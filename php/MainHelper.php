@@ -37,7 +37,7 @@ function getPOW($IP){
 	if ($call[0] == "200") {
 		$values = $call[1];
 		$info = array(
-			"voltage" => $values['StatusSNS']['ENERGY']['Voltage'],
+			"Voltage" => $values['StatusSNS']['ENERGY']['Voltage'],
 			"Current" => $values['StatusSNS']['ENERGY']['Current'],
 			"Power" => $values['StatusSNS']['ENERGY']['Power'],
 			"Factor" => $values['StatusSNS']['ENERGY']['Factor'],
