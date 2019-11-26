@@ -50,7 +50,10 @@
         </a>
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R3C3">
-        &emsp;
+        <a href="index.php?page=scripts">
+            <img src="img/automation.svg" alt="automation" class="w-75">
+            <h5>Automatisatie</h5>
+        </a>
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R3C4">
         &emsp;
