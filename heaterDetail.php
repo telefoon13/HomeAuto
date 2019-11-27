@@ -59,6 +59,7 @@ $device = getOneDevice($heaterid);
 if (is_numeric($device)){
 	header('Location: index.php');
 }
+$boostValue = 180;
 // Check on what modus the device is now
 if($device['operationMode'] == "OFF" && $device['remainingQuickVeto'] == null){
 	$modusDevice = "OFF";
@@ -66,6 +67,7 @@ if($device['operationMode'] == "OFF" && $device['remainingQuickVeto'] == null){
 	$modusDevice = "AUTO";
 }elseif($device['remainingQuickVeto'] != null){
 	$modusDevice = "BOOST";
+	$boostValue = $device['remainingQuickVeto'];
 }elseif($device['operationMode'] == "MANUAL" && $device['remainingQuickVeto'] == null){
 	$modusDevice = "MANUAL";
 }
@@ -95,7 +97,7 @@ if($device['operationMode'] == "OFF" && $device['remainingQuickVeto'] == null){
         <div id="tempsetting">
         <h5>Temperatuur :</h5>
         <div class="slidecontainer">
-            <input type="range" min="10.0" max="30.0" value="<?= $device["currentTemperature"]; ?>>" step="0.5" class="slider" id="tempRange">
+            <input type="range" min="10.0" max="30.0" value="<?= $device["currentTemperature"]; ?>" step="0.5" class="slider" id="tempRange">
             <h5><span id="tempValue"></span> &deg;C</h5>
         </div>
         </div>
@@ -103,7 +105,7 @@ if($device['operationMode'] == "OFF" && $device['remainingQuickVeto'] == null){
         <div id="timesetting">
         <h5>Tijd :</h5>
         <div class="slidecontainer">
-            <input type="range" min="15" max="180" value="60" step="15" class="slider" id="timeRange">
+            <input type="range" min="15" max="360" value="<?= $boostValue; ?>" step="15" class="slider" id="timeRange">
             <h5><span id="timeValue"></span>min</h5>
         </div>
         </div>
