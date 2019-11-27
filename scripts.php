@@ -10,7 +10,7 @@ if (empty($results)) {
 } else {
 foreach ($results as $script) {
 	?>
-    <div class="row" style="min-height: 30px; border-bottom: 1px #000000 solid;" id="R2">
+    <div class="row" style="min-height: 40px; border-bottom: 1px #000000 solid;" id="R2">
         <div class="col-1 align-self-center text-center" id="R2C1">
             <a href="index.php?page=editScript&stop=<?= $script->id; ?>"><img src="img/stop.svg" alt="stop" class="w-25"></a>
             &emsp;
@@ -23,15 +23,15 @@ foreach ($results as $script) {
         </div>
         <div class="col-4 align-self-center text-center" id="R2C4">
             <h5 style="margin-bottom: 0">
-                $script->minute
+                <?= $script->minute; ?>
                 &emsp;
-                $script->hour
+                <?= $script->hour; ?>
                 &emsp;
-                $script->dayOfMonth
+                <?= $script->dayOfMonth; ?>
                 &emsp;
-                $script->month
+                <?= $script->month; ?>
                 &emsp;
-                $script->dayOfWeek
+                <?= $script->dayOfWeek; ?>
             </h5>
         </div>
         <div class="col-1 align-self-center text-center" id="R2C9">
@@ -42,7 +42,7 @@ foreach ($results as $script) {
 }
 }
 ?>
-<div class="row"  style="min-height: 30px;" id="R3">
+<div class="row"  style="min-height: 40px;" id="R3">
     <div class="col-12 align-self-center text-right" id="R3C1">
         <a href="index.php?page=editScript&new=new">
             <h5 style="margin-bottom: 0">Nieuw script</h5>

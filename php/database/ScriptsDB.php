@@ -27,15 +27,15 @@ class ScriptsDB
 
 
 	//PUBLIC CRUD functions
-	/*
+
 		//CREATE
-		public static function create($category)
+		public static function create($script)
 		{
 			return self::getConnection()->executeQuery(
-				"INSERT INTO category (category) VALUES ('?')",
-				array($category->category));
+				"INSERT INTO scripts (state,name,minute,hour,dayOfMonth,month,dayOfWeek) VALUES ('?','?','?','?','?','?','?')",
+				array($script->state,$script->name,$script->minute,$script->hour,$script->dayOfMonth,$script->month,$script->dayOfWeek));
 		}
-	*/
+
 	//READ ALL
 	public static function getAll()
 	{
@@ -55,21 +55,21 @@ class ScriptsDB
 		}
 		return $resultArray;
 	}
-	/*
+
 		//READ by id
 		public static function getById($id)
 		{
 			$result = self::getConnection()->executeQuery(
-				"SELECT * FROM categories WHERE categoryId='?'",
+				"SELECT * FROM scripts WHERE id='?'",
 				array($id));
 			if ($result->num_rows != 1) {
 				return false;
 			}
 			$row = $result->fetch_array();
-			$category = self::convertRowToObject($row);
-			return $category;
+			$script = self::convertRowToObject($row);
+			return $script;
 		}
-
+/*
 		//UPDATE
 		public static function update($category)
 		{
