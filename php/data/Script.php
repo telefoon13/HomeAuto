@@ -2,7 +2,7 @@
 class script
 {
 	public $id;
-	public $state;
+	public $type;
 	public $name;
 	public $minute;
 	public $hour;
@@ -11,10 +11,10 @@ class script
 	public $dayOfWeek;
 
 
-	public function __construct($id, $state, $name, $minute, $hour, $dayOfMonth, $month, $dayOfWeek)
+	public function __construct($id, $type, $name, $minute, $hour, $dayOfMonth, $month, $dayOfWeek)
 	{
 		$this->id = $id;
-		$this->state = $state;
+		$this->type = $type;
 		$this->name = $name;
 		$this->minute = $minute;
 		$this->hour = $hour;
