@@ -1,5 +1,6 @@
 <?php
-include_once ("php/database/ScriptsDB.php");
+include_once("php/database/ScriptsDB.php");
+include_once('php/Crontab.php');
 
 if (checkFilled($_GET['play'])) {
 	?>
@@ -36,7 +37,7 @@ if (checkFilled($_GET['play'])) {
                     <label><h5>Name :</h5> <input type="text" class="form-control" name="name" size="60"></label>
                 </div>
                 <div class="col-6 align-self-center text-left" style="min-height: 40px" id="R2C1">
-                    <label><h5>Time :</h5>
+                    <label><h5>Crontab :</h5>
                         <div class="form-row">
                             <div class="col">
                                 <input type="text" name="minute" class="form-control" size="3">
@@ -77,44 +78,49 @@ if (checkFilled($_GET['play'])) {
 		<?php
 	} elseif ($_GET['new'] == "add") {
 		if (checkFilled($_GET['script']) && checkFilled($_GET['name']) && checkFilled($_GET['minute']) && checkFilled($_GET['hour']) && checkFilled($_GET['dayOfMonth']) && checkFilled($_GET['month']) && checkFilled($_GET['dayOfWeek'])) {
-		    $content = $_GET['script'];
+			$content = $_GET['script'];
 			$file = "automationScripts/" . $_GET['name'] . ".php";
-			$regexMinute = "";
-			$regexHour = "";
-			$regexDayOfMonth = "";
-			$regexMonth = "";
-			$regexDayOfWeek = "";
-			if (!file_exists($file)) {
-				$script = new Script(0, $_GET['state'], $file, $_GET['minute'], $_GET['hour'], $_GET['dayOfMonth'], $_GET['month'], $_GET['dayOfWeek']);
-				if ($script) {
-					$addScript = ScriptsDB::create($script);
-					if ($addScript) {
-						$fp = fopen($file, "w");
-						fwrite($fp, $content);
-						fclose($fp);
-						$message = "Script werd aangemaakt.";
+			$regexMinute = "/^((\*\/)?[1-5]?[0-9])$|^(\*)$/";
+			$regexHour = "/^((\*\/)?(2[0-3]|1[0-9]|[0-9]))$|^(\*)$/";
+			$regexDayOfMonth = "/^((\*\/)?(3[01]|[12][0-9]|[1-9]))$|^(\*)$/";
+			$regexMonth = "/^((\*\/)?(1[0-2]|[1-9]))$|^(\*)$/";
+			$regexDayOfWeek = "/^((\*\/)?([0-6]))$|^(\*)$/";
+			if (preg_match($regexMinute, $_GET['minute']) && preg_match($regexHour, $_GET['hour']) && preg_match($regexDayOfMonth, $_GET['dayOfMonth']) && preg_match($regexMonth, $_GET['month']) && preg_match($regexDayOfWeek, $_GET['dayOfWeek'])) {
+				if (!file_exists($file)) {
+					$script = new Script(0, $_GET['stat'], $_GET['name'], $_GET['minute'], $_GET['hour'], $_GET['dayOfMonth'], $_GET['month'], $_GET['dayOfWeek']);
+					if ($script) {
+						$addScript = ScriptsDB::create($script);
+						if ($addScript) {
+							$fp = fopen($file, "w+");
+							fwrite($fp, $content);
+							fclose($fp);
+							$cronTab = "";
+							$message = "Script werd aangemaakt.";
+						} else {
+							$message = "Er ging iets mis bij de database.";
+						}
 					} else {
-					    $message = "Er ging iets mis bij de database.";
+						$message = "Er ging iets mis bij class aanmaken.";
 					}
 				} else {
-					$message = "Er ging iets mis bij class aanmaken.";
+					$message = "Bestand bestaat al.";
 				}
 			} else {
-				$message = "Bestand bestaat al.";
+			    $message = "Crontab mag enkel uit de correcte Cron Regex bestaan (* of */00 of 00).";
 			}
 		} else {
 			$message = "Er werd iets niet ingevuld.";
 		}
 		?>
         <div class="row" id="R2">
-            <div class="col-12 align-self-center text-center" id="R2C1"><h2><?= $message; ?></h2></div>
+            <div class="col-12 align-self-center text-center" id="R2C1"><h4><?= $message; ?></h4></div>
         </div>
 		<?php
 	}
 } else {
 	?>
     <div class="row" id="R2">
-        <div class="col-12 align-self-center text-center" id="R2C1"><h2>Er is iets mis gegaan.</h2></div>
+        <div class="col-12 align-self-center text-center" id="R2C1"><h4>Er is iets mis gegaan.</h4></div>
     </div>
 	<?php
 }
