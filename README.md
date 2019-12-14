@@ -10,3 +10,5 @@ For the weather & temp i use Netatmo weather station (In and out) also openweath
 Feel free to use what i made but please let me know juist out of intrest :)<br>
 <br>
 Blog : <a href="https://blog.mikedhoore.be/index.php?page=posts&category=25">blog.mikedhoore.be</a>
+<br><br>
+<div>All icons downloaded from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>

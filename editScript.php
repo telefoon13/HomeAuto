@@ -122,7 +122,7 @@ if (checkFilled($_GET['id'])) {
 							}
 							$cronTab = $_GET['minute'] . " " . $_GET['hour'] . " " . $_GET['dayOfMonth'] . " " . $_GET['month'] . " " . $_GET['dayOfWeek'] . " " . $program . " /var/www/html/automationScripts/" . $_GET['name'] . "." . $_GET['type'];
 							Crontab::addJob($cronTab);
-							//shell_exec("chmod 777 /var/www/html/automationScripts/" . $_GET['name'] . "." . $_GET['type']);
+							shell_exec("chmod +x /var/www/html/automationScripts/" . $_GET['name'] . "." . $_GET['type']);
 							$message = "Script werd aangemaakt en in crontab geplaatst.";
 							echo "<script>window.setTimeout(function(){window.location.href = \"index.php\"}, 1000);</script>";
 						} else {

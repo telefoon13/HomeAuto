@@ -31,7 +31,7 @@ if ($_GET['ip'] == "192.168.178.154" && $_GET['port'] == "1"){
 	}
 }
 if ($return == "200"){
-    $message = "Licht is geschakeld";
+    $message = "Toestel is geschakeld";
 } else {
     $message = "Er ging iets mis";
 }

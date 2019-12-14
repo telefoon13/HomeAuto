@@ -28,7 +28,7 @@
     }
     ?>
 
-<div class="container-fluid">
+<div class="container-fluid" style="max-width: 1024px; vertical-align: center">
     <?php
     //Dont show menu whem large view camera
     if (empty($_GET['camid']) && $page != "3dprinter") {
