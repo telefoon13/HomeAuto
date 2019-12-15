@@ -15,6 +15,7 @@ $(document).ready(function () {
     function getWeatherStationInfo() {
         $.ajax({
             url: 'php/netatmo.php',
+            data: {"ajax": "1"},
             dataType: 'json',
             success: onSuccess,
             error: function (err) {
@@ -35,10 +36,10 @@ $(document).ready(function () {
         if (typeof stationInfo === 'undefined'){
             divs = "Error loading";
         } else {
-            divs += '<h2>';
+            divs += '<a href="?page=netatmo"><h2>';
             divs += stationInfo.temperature_OUT.toFixed(1);
             divs += '&deg;C';
-            divs += '</h2>';
+            divs += '</h2></a> ';
         }
 
         $('#R1C3').html(divs);

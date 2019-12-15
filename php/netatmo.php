@@ -106,5 +106,7 @@ function getWeatherStationInfo(){
     }
 }
 
-$jsonToReturn = json_encode(getWeatherStationInfo());
-echo $jsonToReturn;
+if (isset($_GET['ajax'])){
+	$jsonToReturn = json_encode(getWeatherStationInfo());
+	echo $jsonToReturn;
+}
