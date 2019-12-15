@@ -7,8 +7,9 @@ $(document).ready(function () {
     //
     var openWeatherInfo = "img/weather/question.svg";
 
-    getWeatherStationInfo();
-    getOpenWeatherInfo();
+        getWeatherStationInfo();
+        getOpenWeatherInfo();
+
 });
     //Get the weather station info
     function getWeatherStationInfo() {
@@ -20,6 +21,7 @@ $(document).ready(function () {
                 console.log('Fout: ', err);
             }
         });
+        setTimeout(getWeatherStationInfo, 1800000);
     }
 
     //Fill the empty array with info when there was a suc6
@@ -52,6 +54,7 @@ function getOpenWeatherInfo() {
             console.log('Fout: ', err);
         }
     });
+    setTimeout(getOpenWeatherInfo, 1800000);
 }
 
 //Fill the empty string with info when there was a suc6
