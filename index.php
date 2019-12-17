@@ -51,10 +51,10 @@
                 <span id="date_time"></span>
                 <script type="text/javascript">window.onload = date_time('date_time');</script>
             </div>
-            <div class="d-none d-sm-block col-sm-2 align-self-center text-right" id="R1C3">
+            <div class="d-none d-sm-block col-sm-2 align-self-center text-center" id="R1C3">
                 TEMP loading
             </div>
-            <div class="d-none d-sm-block col-sm-2 align-self-center text-left" id="R1C4">
+            <div class="d-none d-sm-block col-sm-2 align-self-center text-center" id="R1C4">
                 <img alt="Question" src="img/weather/question.svg" class="w-50">
             </div>
             <div class="col-sm-2 col-6 align-self-center text-center" id="R1C5">
