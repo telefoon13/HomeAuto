@@ -36,10 +36,10 @@ $(document).ready(function () {
         if (typeof stationInfo === 'undefined'){
             divs = "Error loading";
         } else {
-            divs += '<a href="?page=netatmo"><h2>';
+            divs += '<a href="?page=netatmo"><h1 style=" font-size: 50px;">';
             divs += stationInfo.temperature_OUT.toFixed(1);
             divs += '&deg;C';
-            divs += '</h2></a> ';
+            divs += '</h1></a> ';
         }
 
         $('#R1C3').html(divs);
@@ -67,11 +67,11 @@ function onSuccessOpenWeatherMap(data) {
 function buildDivOpenWeather() {
     var divs = '';
     if (typeof openWeatherInfo === 'undefined'){
-        divs = "<img alt=\"Question\" src=\"img/weather/question.svg\" class=\"w-50\">";
+        divs = "<img alt=\"Question\" src=\"img/weather/question.svg\" class=\"w-75\">";
     } else {
         divs = '<img src="' +
             openWeatherInfo.svg +
-            '" class="w-50" alt="WeatherIcon"> ';
+            '" class="w-75" alt="WeatherIcon"> ';
     }
 
     $('#R1C4').html(divs);
