@@ -10,8 +10,9 @@ function date_time(id)
     days = new Array('zon', 'maa', 'din', 'woe', 'don', 'vri', 'zat');
     h = date.getHours();
     if (h >= 22 || h <= 6){
-
         $("body").css("background-color", "black");
+    } else {
+        $("body").css("background-color", "azure");
     }
     if(h<10)
     {
@@ -24,6 +25,6 @@ function date_time(id)
     }
     result = '<h1 class="display-3" style="font-weight: bold;">' + h + ':' + m + '</h1><h3>' + days[day] + ' ' + d + ' ' + months[month] + ' ' + year + '</h3>';
     document.getElementById(id).innerHTML = result;
-    setTimeout('date_time("'+id+'");','10000');
+    setTimeout('date_time("'+id+'");','60000');
     return true;
 }
