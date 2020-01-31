@@ -52,7 +52,7 @@ function getPOW($IP){
 }
 
 //Universal cUrl method to do the API calls
-function cUrl($url,$method = "GET",$body = null, $useCookie=false, $header = null){
+function cUrl($url,$method = "GET",$body = null, $useCookie=false, $header = null, $token = null){
     //Initialise cUrl
     $cUrl = curl_init();
     //Make sure the returns goes to the variable
@@ -76,6 +76,8 @@ function cUrl($url,$method = "GET",$body = null, $useCookie=false, $header = nul
     //HTTP header JSON
     if (checkFilled($header)){
         curl_setopt($cUrl, CURLOPT_HTTPHEADER, array($header));
+    } else if (checkFilled($token)){
+        curl_setopt($cUrl, CURLOPT_HTTPHEADER, array('Content-Type: application/json',$token));
     } else {
         curl_setopt($cUrl, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
     }
