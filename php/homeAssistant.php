@@ -7,15 +7,19 @@ $Bearertoken = "Authorization: Bearer ".$homeAssistant_token;
 //URL's used
 $baseURL = "http://192.168.178.207:8123/api/";
 
-function testHA(){
+function getStateEntity($entity_id){
     global $Bearertoken;
     global $baseURL;
     //Do the call
-	$call = cUrl($baseURL, "GET", null, true, null, $Bearertoken);
+	$call = cUrl($baseURL."states/$entity_id", "GET", null, true, null, $Bearertoken);
 	//Only return the data if HTTP code equals 200 else return HTTP code
 	if ($call[0] == "200"){
         $values = $call[1];
-        return var_dump($values);
+        $info=array(
+            "name"=>$values["attributes"]["friendly_name"],
+            "state"=>$values["state"]
+        );
+        return $info;
     } else {
         return $call[0];
     }
