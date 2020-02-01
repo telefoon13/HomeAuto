@@ -14,7 +14,8 @@ foreach ($binary_sensors as $binary_sensor){
         $message .= "<li>".$sensor["name"] . " is niet klaar.</li>";
     }
 }
-if (!$alarmClear){
+$statusAlarm = getStateEntity("input_boolean.alarmstate");
+if (!$alarmClear && $statusAlarm == "off"){
     echo "
             <div class=\"row\" id=\"R2\">
                 <div class=\"col-12 align-self-center text-center\" id=\"R2C1\">
@@ -28,8 +29,7 @@ if (!$alarmClear){
 } else {
     //Hier code klavier
     ?>
-    <form method="get" action="index.php">
-        <input type="hidden" name="page" value="alarm"/>
+    <form method="post" action="index.php?page=setAlarm">
     <div class="row" id="R2">
         <div class="d-none d-sm-block col-sm-1 align-self-center text-center" id="R2C0">
             &emsp;
@@ -71,35 +71,38 @@ if (!$alarmClear){
             &emsp;
         </div>
     </div>
-        <?php
-        $statusAlarm = getStateEntity("input_boolean.alarmstate");
-        ?>
     <div class="row" id="R3">
-        <div class="d-none d-sm-block col-sm-4 align-self-center text-center" id="R2C11">
+        <div class="d-none d-sm-block col-sm-2 align-self-center text-center" id="R2C11">
             &emsp;
         </div>
-        <div class="col-sm-1 col-3 align-self-center text-center" id="R3C0">
+        <div class="d-block d-sm-none col-12 align-self-center text-center" id="R2C11">
+            &emsp;
+        </div>
+        <div class="col-sm-3 col-12 align-self-center text-center" id="R3C0">
             <?php
             if ($statusAlarm["state"] == "on"){
                 echo "&emsp;";
             } else {
-                echo "<img src=\"img/moon.svg\" alt=\"moon\">";
+                //echo "<input type='image' src='img/moon.svg' alt='moon' name='Submit4' value='moon'>";
+                echo "<input type='submit' name='submit' value='Gaan slapen' class=\"btn btn-primary\" style=\"height: 70px; text-align: center; font-size: 25px\">";
             }
             ?>
         </div>
-        <div class="col-sm-2 col-6 align-self-center text-center" id="R3C1">
-            <input type="text" pattern="\d*" maxlength="4" minlength="4" name="code" id="code" class="form-control" style="height: 70px; text-align: center; -webkit-appearance: textfield; font-size: 25px">
+        <div class="col-sm-2 col-12 align-self-center text-center" id="R3C1">
+            <input type="text" autofocus pattern="\d*" maxlength="4" minlength="4" name="code" id="code" class="form-control" style="height: 70px; text-align: center; font-size: 25px">
         </div>
-        <div class="col-sm-1 col-3  align-self-center text-center" id="R3C0">
+        <div class="col-sm-3 col-12  align-self-center text-center" id="R3C0">
             <?php
             if ($statusAlarm["state"] == "on"){
-                echo "<img src=\"img/unlocked.svg\" alt=\"unlocked\">";
+                //echo "<img src=\"img/unlocked.svg\" alt=\"unlocked\">";
+                echo "<input type='submit' name='submit' value='Uitschakelen' class=\"btn btn-primary\" style=\"height: 70px; text-align: center; font-size: 25px\">";
             } else {
-                echo "<img src=\"img/exit.svg\" alt=\"exit\">";
+                //echo "<img src=\"img/exit.svg\" alt=\"exit\">";
+                echo "<input type='submit' name='submit' value='Buiten huis' class=\"btn btn-primary\" style=\"height: 70px; text-align: center; font-size: 25px\">";
             }
             ?>
         </div>
-        <div class="d-none d-sm-block col-sm-4 align-self-center text-center" id="R2C11">
+        <div class="d-none d-sm-block col-sm-2 align-self-center text-center" id="R2C11">
             &emsp;
         </div>
     </div>

@@ -10,14 +10,12 @@ $(document).ready(function () {
         }
         if (code.val().length === 4){
             code.attr('type', 'password');
-            code.attr('disabled', 'disabled');
         }
     });
 
     code.on('input',function (e) {
         if (code.val().length === 4){
             code.attr('type', 'password');
-            code.attr('disabled', 'disabled');
         }
     })
 });

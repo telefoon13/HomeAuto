@@ -31,8 +31,8 @@ function postStateEntity($entity_id, $state){
     $body = "
     {
         \"state\": \"".$state."\"
-    s}";
-    $call = cUrl($baseURL."state/".$entity_id, "POST", $body , false,null, $Bearertoken);
+    }";
+    $call = cUrl($baseURL."states/".$entity_id, "POST", $body , false,null, $Bearertoken);
     return $call[0];
 }
 ?>
