@@ -11,7 +11,7 @@ function getStateEntity($entity_id){
     global $Bearertoken;
     global $baseURL;
     //Do the call
-	$call = cUrl($baseURL."states/$entity_id", "GET", null, true, null, $Bearertoken);
+	$call = cUrl($baseURL."states/$entity_id", "GET", null, false, null, $Bearertoken);
 	//Only return the data if HTTP code equals 200 else return HTTP code
 	if ($call[0] == "200"){
         $values = $call[1];
@@ -23,5 +23,16 @@ function getStateEntity($entity_id){
     } else {
         return $call[0];
     }
+}
+
+function postStateEntity($entity_id, $state){
+    global $Bearertoken;
+    global $baseURL;
+    $body = "
+    {
+        \"state\": \"".$state."\"
+    s}";
+    $call = cUrl($baseURL."state/".$entity_id, "POST", $body , false,null, $Bearertoken);
+    return $call[0];
 }
 ?>
