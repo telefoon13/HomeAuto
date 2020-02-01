@@ -3,7 +3,7 @@ include_once("php/MainHelper.php");
 include_once("php/hue.php");
 $return = switchSonOffLight($_GET['ip'], $_GET['port'], "");
 //Alles uit dan ook staande lamp & Hue spots
-if ($_GET['ip'] == "192.168.178.154" && $_GET['port'] == "2"){
+if ($_GET['ip'] == "192.168.178.154" && $_GET['port'] == "1"){
     $return2 = switchSonOffLight("192.168.178.155", "1", "off");
 	$return3 = switchSonOffLight("192.168.178.160", "1", "off");
 	$return4 = switchSonOffLight("192.168.178.165", "1", "off");
@@ -17,7 +17,7 @@ if ($_GET['ip'] == "192.168.178.154" && $_GET['port'] == "2"){
     }
 }
 //Alles aan dan ook staande lamp & Hue spots
-if ($_GET['ip'] == "192.168.178.154" && $_GET['port'] == "1"){
+if ($_GET['ip'] == "192.168.178.154" && $_GET['port'] == "2"){
 	$return2 = switchSonOffLight("192.168.178.155", "1", "on");
 	$return3 = switchSonOffLight("192.168.178.160", "1", "on");
 	$return4 = switchSonOffLight("192.168.178.165", "1", "on");
