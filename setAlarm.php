@@ -6,11 +6,11 @@ $submit = $_POST["submit"];
 
 if (codeOk($code)) {
     if ($submit == "Gaan slapen") {
-        $entity_id = "input_boolean.alarmstate";
+        $entity_id = "input_boolean.alarmstatepre";
         $state = "on";
         $message = "Alarm werd ingeschakeld.<br><br>U heeft nog<div id='seconds'>60 seconden</div> om de beneden verdiepeing te verlaten.";
     } elseif ($submit == "Buiten huis") {
-        $entity_id = "input_boolean.alarmstate";
+        $entity_id = "input_boolean.alarmstatepre";
         $state = "on";
         $message = "Alarm werd ingeschakeld.<br><br>U heeft nog<div id='seconds'>60 seconden</div> om het gebouw te verlaten.";
     } elseif ($submit == "Uitschakelen") {

@@ -15,7 +15,8 @@ foreach ($binary_sensors as $binary_sensor){
     }
 }
 $statusAlarm = getStateEntity("input_boolean.alarmstate");
-if (!$alarmClear && $statusAlarm == "off"){
+$statusAlarmPre = getStateEntity("input_boolean.alarmstatepre");
+if (!$alarmClear && $statusAlarm["state"] == "off" && $statusAlarmPre["state"] == "off"){
     echo "
             <div class=\"row\" id=\"R2\">
                 <div class=\"col-12 align-self-center text-center\" id=\"R2C1\">
@@ -80,7 +81,7 @@ if (!$alarmClear && $statusAlarm == "off"){
         </div>
         <div class="col-sm-3 col-12 align-self-center text-center" id="R3C0">
             <?php
-            if ($statusAlarm["state"] == "on"){
+            if ($statusAlarm["state"] == "on" OR $statusAlarmPre["state"] == "on"){
                 echo "&emsp;";
             } else {
                 //echo "<input type='image' src='img/moon.svg' alt='moon' name='Submit4' value='moon'>";
@@ -93,7 +94,7 @@ if (!$alarmClear && $statusAlarm == "off"){
         </div>
         <div class="col-sm-3 col-12  align-self-center text-center" id="R3C0">
             <?php
-            if ($statusAlarm["state"] == "on"){
+            if ($statusAlarm["state"] == "on" OR $statusAlarmPre["state"] == "on"){
                 //echo "<img src=\"img/unlocked.svg\" alt=\"unlocked\">";
                 echo "<input type='submit' name='submit' value='Uitschakelen' class=\"btn btn-primary\" style=\"height: 70px; text-align: center; font-size: 25px\">";
             } else {
