@@ -3,7 +3,9 @@ include_once("php/MainHelper.php");
 include_once("php/database/MeterDB.php");
 
 $gasToday = round(MeterDB::GetUsedThisXXByType("gas", "day"),2);
+$gasTodayPrice = round($gasToday*0.4,2);
 $serverToday = round(getPOW("192.168.178.156")["Today"],2);
+$serverTodayPrice = round($serverToday*0.2,2);
 ?>
 <div class="row" id="R2">
 	<div class="col-sm-2 col-6 align-self-center text-center" id="R2C1">
@@ -12,7 +14,7 @@ $serverToday = round(getPOW("192.168.178.156")["Today"],2);
 		</a>
 	</div>
 	<div class="col-sm-2 col-6 align-self-center text-center" id="R2C2">
-		<p>Dag</>
+		<p>Dag</p>
 		<h4>xx.xx kWh</h4>
 	</div>
 	<div class="col-sm-2 col-6 align-self-center text-center" id="R2C3">
@@ -32,6 +34,7 @@ $serverToday = round(getPOW("192.168.178.156")["Today"],2);
 	<div class="col-sm-2 col-6 align-self-center text-center" id="R2C6">
         <p>Gas</p>
         <h4> <?= $gasToday; ?> M&sup3;</h4>
+        <p>&euro; <?= $gasTodayPrice; ?></p>
 	</div>
 </div>
 <div class="row" id="R3">
@@ -51,7 +54,8 @@ $serverToday = round(getPOW("192.168.178.156")["Today"],2);
 	</div>
 	<div class="col-sm-2 col-6 align-self-center text-center" id="R3C4">
         <p>Server</p>
-        <h4> <?= $serverToday; ?> kWh</h4>
+        <h4><?= $serverToday; ?> kWh</h4>
+        <p>&euro; <?= $serverTodayPrice; ?></p>
 	</div>
 	<div class="col-sm-2 col-6 align-self-center text-center" id="R3C5">
 		&emsp;

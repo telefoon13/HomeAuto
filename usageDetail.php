@@ -32,7 +32,18 @@ if ($_GET['id'] == "server") {
     ?>
     <div class="row" id="R2">
         <div class="col-12 align-self-center text-center" id="R2C1">
-            <?php echo MeterDB::getHighestBytype('gas')->value; ?>
+            <?php
+            $to = new DateTime('now');
+            $from1 = new DateTime('now');
+            $from = $from1->modify('-6 hour');
+
+            //echo $to->format('Y-m-d H:i:s') . "<br>" . $from->format('Y-m-d');
+            $last24hours = MeterDB::getAllBetweenByType("gas" ,$from->format('Y-m-d H:i:s'), $to->format('Y-m-d H:i:s'));
+            //var_dump($last24hours);
+            foreach ($last24hours as $entry){
+                echo $entry->value . "<br>";
+            }
+            ?>
         </div>
     </div>
     <?php
