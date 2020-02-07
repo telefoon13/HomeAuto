@@ -32,7 +32,7 @@ class MeterDB
         if ($high->value > $meter->value){
             return false;
         }
-        if (($high->value-$meter->value) > ($high->value/100)*10){
+        if ($meter->value > ($high->value + 10) ){
             return false;
         }
         return self::getConnection()->executeQuery(
