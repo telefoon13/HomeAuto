@@ -31,8 +31,10 @@ if ($_GET['id'] == "server") {
 } elseif ($_GET['id'] == "gas") {
     ?>
     <div class="row" id="R2">
-        <div class="col-12 align-self-center text-center" id="R2C1">
+        <div class="col-sm-6 col-12 align-self-center text-center" id="R2C1">
+            <h1>Gas</h1>
             <?php
+
             $to = new DateTime('now');
             $from1 = new DateTime('now');
             $from = $from1->modify('-6 hour');
@@ -44,6 +46,26 @@ if ($_GET['id'] == "server") {
                 echo $entry->value . "<br>";
             }
             ?>
+        </div>
+        <div class="col-sm-3 col-6 align-self-center text-right" id="R2C2">
+            <br>
+            <h6>Laatste meterstand :</h6>
+            <h6>Verbruik laatste 24 uur :</h6>
+            <h6>Verbruik laatste week :</h6>
+            <h6>Verbruik laatste maand :</h6>
+            <h6>Verbruik laatste jaar :</h6>
+            <br><br>
+            <a href="?page=usageLive&type=gas" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Live beeld</a>
+        </div>
+        <div class="col-sm-3 col-6 align-self-center text-left" id="R2C3">
+            <br>
+            <h6>6315.54 M³</h6>
+            <h6>3.01 M³ / € 1.28</h6>
+            <h6>3.01 M³ / € 1.28</h6>
+            <h6>3.01 M³ / € 1.28</h6>
+            <h6>3.01 M³ / € 1.28</h6>
+            <br><br>
+            <a href="?page=usageNow&type=gas" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Meet nu</a>
         </div>
     </div>
     <?php
