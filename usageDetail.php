@@ -29,41 +29,50 @@ if ($_GET['id'] == "server") {
     </div>
     <?php
 } elseif ($_GET['id'] == "gas") {
+    $lastValue = round(MeterDB::getHighestBytype("gas")->value,2);
+    $now = new DateTime('now');
+    $nowMinus24h = new DateTime('-1day');
+    $nowMinus7d = new DateTime('-7day');
+    $nowMinus1m = new DateTime('-1month');
+    $nowMinus1y = new DateTime('-1year');
+    $gasToday = round(MeterDB::GetUsedBetweenByType("gas", $nowMinus24h->format('Y-m-d H:i:s'), $now->format('Y-m-d H:i:s')),2);
+    $gasTodayPrice = round($gasToday*MeterDB::$gasPrice,2);
+    $gasThisWeek = round(MeterDB::GetUsedBetweenByType("gas", $nowMinus7d->format('Y-m-d H:i:s'), $now->format('Y-m-d H:i:s')),2);
+    $gasThisWeekPrice = round($gasThisWeek*MeterDB::$gasPrice,2);
+    $gasThisMonth = round(MeterDB::GetUsedBetweenByType("gas", $nowMinus1m->format('Y-m-d H:i:s'), $now->format('Y-m-d H:i:s')),2);
+    $gasThisMonthPrice = round($gasThisMonth*MeterDB::$gasPrice,2);
+    $gasThisYear = round(MeterDB::GetUsedBetweenByType("gas", $nowMinus1y->format('Y-m-d H:i:s'), $now->format('Y-m-d H:i:s')),2);
+    $gasThisYearPrice = round($gasThisYear*MeterDB::$gasPrice,2);
     ?>
     <div class="row" id="R2">
         <div class="col-sm-6 col-12 align-self-center text-center" id="R2C1">
             <h1>Gas</h1>
             <?php
-
-            $to = new DateTime('now');
-            $from1 = new DateTime('now');
-            $from = $from1->modify('-6 hour');
-
-            //echo $to->format('Y-m-d H:i:s') . "<br>" . $from->format('Y-m-d');
-            $last24hours = MeterDB::getAllBetweenByType("gas" ,$from->format('Y-m-d H:i:s'), $to->format('Y-m-d H:i:s'));
-            //var_dump($last24hours);
+            $last24hours = MeterDB::getAllBetweenByType("gas" ,$nowMinus24h->format('Y-m-d H:i:s'), $now->format('Y-m-d H:i:s'));
             foreach ($last24hours as $entry){
-                echo $entry->value . "<br>";
+                echo $entry->value ." / ".$entry->dateti."<br>";
             }
             ?>
         </div>
         <div class="col-sm-3 col-6 align-self-center text-right" id="R2C2">
             <br>
-            <h6>Laatste meterstand :</h6>
-            <h6>Verbruik laatste 24 uur :</h6>
-            <h6>Verbruik laatste week :</h6>
-            <h6>Verbruik laatste maand :</h6>
-            <h6>Verbruik laatste jaar :</h6>
+            <h3>Huidige stand :</h3>
+            <br>
+            <h5>Verbruik 1 dag :</h5>
+            <h5>Verbruik 7 dagen :</h5>
+            <h5>Verbruik 1 maand :</h5>
+            <h5>Verbruik 1 jaar :</h5>
             <br><br>
             <a href="?page=usageLive&type=gas" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Live beeld</a>
         </div>
         <div class="col-sm-3 col-6 align-self-center text-left" id="R2C3">
             <br>
-            <h6>6315.54 M³</h6>
-            <h6>3.01 M³ / € 1.28</h6>
-            <h6>3.01 M³ / € 1.28</h6>
-            <h6>3.01 M³ / € 1.28</h6>
-            <h6>3.01 M³ / € 1.28</h6>
+            <h3><?= $lastValue; ?> M³</h3>
+            <br>
+            <h5><?= $gasToday; ?> M³ / € <?= $gasTodayPrice; ?></h5>
+            <h5><?= $gasThisWeek; ?> M³ / € <?= $gasThisWeekPrice; ?></h5>
+            <h5><?= $gasThisMonth; ?> M³ / € <?= $gasThisMonthPrice; ?></h5>
+            <h5><?= $gasThisYear; ?> M³ / € <?= $gasThisYearPrice; ?></h5>
             <br><br>
             <a href="?page=usageNow&type=gas" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Meet nu</a>
         </div>

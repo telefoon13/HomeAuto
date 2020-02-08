@@ -4,6 +4,11 @@ include_once "DatabaseFactory.php";
 
 class MeterDB
 {
+    public static $gasPrice = 0.4;
+    public static $waterPrice = 0.15;
+    public static $elekDayPrice = 0.3;
+    public static $elekNightPrice = 0.1;
+
     //PRIVATE help functions
 
     //Make DB connection
@@ -17,7 +22,7 @@ class MeterDB
     {
         return new meter(
             $row["id"],
-            $row["datetime"],
+            $row["dateti"],
             $row["type"],
             $row["value"]
         );
@@ -32,7 +37,7 @@ class MeterDB
         if ($high->value > $meter->value){
             return false;
         }
-        if ($meter->value > ($high->value + 10) ){
+        if ($meter->value > ($high->value + 50) ){
             return false;
         }
         return self::getConnection()->executeQuery(
@@ -43,7 +48,7 @@ class MeterDB
     //getHighestBytype
     public static function getHighestBytype($type)
     {
-        $result = self::getConnection()->executeQuery("SELECT * FROM meters WHERE type='".$type."' AND value=(SELECT MAX(value) FROM meters WHERE type='".$type."')");
+        $result = self::getConnection()->executeQuery("SELECT * FROM meters WHERE type='".$type."' AND value=(SELECT MAX(value) FROM meters WHERE type='".$type."') LIMIT 1");
         if ($result->num_rows != 1) {
             return false;
         }
@@ -52,44 +57,16 @@ class MeterDB
         return $meter;
     }
 
-    //GetUsedTodayByType
-    public static function GetUsedThisXXByType($type, $xx)
-    {
-        if ($xx == "day"){
-            $format = "Y-m-d";
-        } elseif ($xx =="month") {
-            $format = "Y-m";
-        } elseif ($xx == "year") {
-            $format = "Y";
-        } else {
-            return false;
-        }
-        $today = date($format);
-        $lowest = self::getConnection()->executeQuery("SELECT * FROM meters WHERE type='".$type."' AND value=(SELECT MIN(value) FROM meters WHERE type='".$type."' AND dateti LIKE '".$today."%')");
-        if ($lowest->num_rows != 1) {
-            return false;
-        }
-        $rowL = $lowest->fetch_array();
-        $meterL = self::convertRowToObject($rowL);
-        $highest = self::getConnection()->executeQuery("SELECT * FROM meters WHERE type='".$type."' AND value=(SELECT MAX(value) FROM meters WHERE type='".$type."' AND dateti LIKE '".$today."%')");
-        if ($highest->num_rows != 1) {
-            return false;
-        }
-        $rowH = $highest->fetch_array();
-        $meterH = self::convertRowToObject($rowH);
-        return $meterH->value-$meterL->value;
-    }
-
     //GetUsedBetweenDateByType
     public static function GetUsedBetweenByType($type, $from,$to)
     {
-        $lowest = self::getConnection()->executeQuery("SELECT * FROM meters WHERE type='".$type."' AND value=(SELECT MIN(value) FROM meters WHERE type='".$type."' AND dateti BETWEEN '".$from."%' AND '".$to."%')");
+        $lowest = self::getConnection()->executeQuery("SELECT * FROM meters WHERE type='".$type."' AND value=(SELECT MIN(value) FROM meters WHERE type='".$type."' AND dateti BETWEEN '".$from."%' AND '".$to."%') LIMIT 1");
         if ($lowest->num_rows != 1) {
             return false;
         }
         $rowL = $lowest->fetch_array();
         $meterL = self::convertRowToObject($rowL);
-        $highest = self::getConnection()->executeQuery("SELECT * FROM meters WHERE type='".$type."' AND value=(SELECT MAX(value) FROM meters WHERE type='".$type."' AND dateti BETWEEN '".$from."%' AND '".$to."%')");
+        $highest = self::getConnection()->executeQuery("SELECT * FROM meters WHERE type='".$type."' AND value=(SELECT MAX(value) FROM meters WHERE type='".$type."' AND dateti BETWEEN '".$from."%' AND '".$to."%') LIMIT 1");
         if ($highest->num_rows != 1) {
             return false;
         }
@@ -139,4 +116,5 @@ class MeterDB
         }
         return $resultArray;
     }
+
 }

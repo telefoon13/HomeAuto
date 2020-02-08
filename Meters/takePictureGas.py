@@ -32,18 +32,18 @@ if requestLightOn.status_code == 200:
         cv2.imwrite(BaseFolder+"FullImage/"+DateTime+"G.jpg", grayImage)
         #Hoogte en breedte van aparte digit's
         w = 80
-        h = 100
+        h = 110
         #Functie om digits uit te knippen
         def cutDigit(position, x, y):
             digCrop = grayImage[y:y+h, x:x+w]
             (thresh, digBW) = cv2.threshold(digCrop, 128, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
             cv2.imwrite(BaseFolder+"Numbers/"+DateTime+"Dig"+str(position)+".jpg", digBW)
         cutDigit(2,390,560)
-        cutDigit(3,500,570)
-        cutDigit(4,625,575)
-        cutDigit(5,755,570)
-        cutDigit(6,890,565)
-        cutDigit(7,1000,560)
+        cutDigit(3,500,555)
+        cutDigit(4,625,565)
+        cutDigit(5,745,565)
+        cutDigit(6,880,555)
+        cutDigit(7,1000,545)
         #De geknipte afbeeldingen samen voegen
         images = [Image.open(x) for x in [BaseFolder+"Numbers/"+DateTime+"Dig2.jpg",BaseFolder+"Numbers/"+DateTime+"Dig3.jpg",BaseFolder+"Numbers/"+DateTime+"Dig4.jpg",BaseFolder+"Numbers/"+DateTime+"Dig5.jpg",BaseFolder+"Numbers/"+DateTime+"Dig6.jpg",BaseFolder+"Numbers/"+DateTime+"Dig7.jpg"]]
         widths, heights = zip(*(i.size for i in images))
