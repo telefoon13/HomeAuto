@@ -56,7 +56,7 @@ if ($_GET['id'] == "server") {
         </div>
         <div class="col-sm-3 col-6 align-self-center text-right" id="R2C2">
             <br>
-            <h3>Huidige stand :</h3>
+            <h3>Stand nu:</h3>
             <br>
             <h5>Verbruik 1 dag :</h5>
             <h5>Verbruik 7 dagen :</h5>

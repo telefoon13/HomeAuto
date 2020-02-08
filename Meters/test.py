@@ -1,6 +1,6 @@
 import pytesseract
 import cv2
-imagepath = "/mnt/md-homeauto/Meters/Gas/Numbers/All20200208190001.jpg"
+imagepath = "/mnt/md-homeauto/Meters/Gas/Numbers/All20200208203309.jpg"
 
 imageProc = cv2.imread(imagepath)
 dig6text = pytesseract.image_to_string(imageProc, lang='eng', config='--psm 6 -c tessedit_char_whitelist=0123456789')

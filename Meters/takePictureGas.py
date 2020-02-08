@@ -38,10 +38,10 @@ if requestLightOn.status_code == 200:
             digCrop = grayImage[y:y+h, x:x+w]
             (thresh, digBW) = cv2.threshold(digCrop, 128, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
             cv2.imwrite(BaseFolder+"Numbers/"+DateTime+"Dig"+str(position)+".jpg", digBW)
-        cutDigit(2,390,560)
-        cutDigit(3,500,555)
-        cutDigit(4,625,565)
-        cutDigit(5,745,565)
+        cutDigit(2,390,550)
+        cutDigit(3,500,545)
+        cutDigit(4,625,555)
+        cutDigit(5,745,555)
         cutDigit(6,880,555)
         cutDigit(7,1000,545)
         #De geknipte afbeeldingen samen voegen
