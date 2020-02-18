@@ -35,9 +35,11 @@ class MeterDB
     {
         $high = self::getHighestBytype($meter->type);
         if ($high->value > $meter->value){
+            echo "Vorige was hoger" + $high->value;
             return false;
         }
         if ($meter->value > ($high->value + 50) ){
+            echo "Te veel in eens";
             return false;
         }
         return self::getConnection()->executeQuery(

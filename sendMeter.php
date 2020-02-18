@@ -12,6 +12,12 @@ if (!empty($dateti) && !empty($type) && !empty($value)){
         $meterDB = MeterDB::create($meter);
         if ($meterDB){
             echo "OK";
+        } else {
+            echo "Fout in DB";
         }
+    }else{
+        echo "Object niet gemaakt";
     }
+} else {
+    echo "Iets leeg";
 }
