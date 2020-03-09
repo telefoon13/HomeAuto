@@ -4,7 +4,20 @@ include_once("php/homeAssistant.php");
 
 //Get all the sensors
 //Array of all sensors that need to be clear before turning on Alarm(To add in DB)
-$binary_sensors = array("binary_sensor.reedvoordeur","binary_sensor.vibration_11","binary_sensor.water_12","");
+$binary_sensors = array(
+    "binary_sensor.reedvoordeur",
+    "binary_sensor.reedvoorraam",
+    "binary_sensor.reedachterdeur",
+    "binary_sensor.reedachterraam",
+    "binary_sensor.reedjuliekamerlinks",
+    "binary_sensor.reedjuliekamermidden",
+    "binary_sensor.reedjuliekamerrechts",
+    "binary_sensor.reedknutselkamer",
+    "binary_sensor.reedbureauvoor",
+    "binary_sensor.reedbureauachter",
+    "binary_sensor.reedzoldervoor",
+    "binary_sensor.reedzolderachter",
+    "binary_sensor.vibration_11");
 $alarmClear = true;
 $message = "";
 foreach ($binary_sensors as $binary_sensor){
