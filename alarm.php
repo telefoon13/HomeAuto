@@ -15,6 +15,7 @@ $binary_sensors = array(
     "binary_sensor.reedknutselkamer",
     "binary_sensor.reedbureauvoor",
     "binary_sensor.reedbureauachter",
+    "binary_sensor.reedtraphall",
     "binary_sensor.reedzoldervoor",
     "binary_sensor.reedzolderachter",
     "binary_sensor.vibration_11");
