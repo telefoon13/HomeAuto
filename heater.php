@@ -109,13 +109,22 @@ if (empty($devices) || $devices == 400 || $devices == 404 || $devices == 401 || 
 			?>
         </div>
         <div class="col-sm-2 col-6 align-self-center text-center" id="R3C3">
-            &emsp;
+            <a href="index.php?page=heaterDetail&heaterid=down">
+                <img src="img/heater.svg" alt="heater" class="w-75">
+                <h5>Beneden </h5> <h5>verdiep</h5>
+            </a>
         </div>
         <div class="col-sm-2 col-6 align-self-center text-center" id="R3C4">
-            &emsp;
+            <a href="index.php?page=heaterDetail&heaterid=up">
+                <img src="img/heater.svg" alt="heater" class="w-75">
+                <h5>Boven </h5> <h5>verdiep</h5>
+            </a>
         </div>
         <div class="col-sm-2 col-6 align-self-center text-center" id="R3C5">
-            &emsp;
+            <a href="index.php?page=heaterDetail&heaterid=all">
+                <img src="img/heater.svg" alt="heater" class="w-75">
+                <h5>Volledig</h5> <h5>huis</h5>
+            </a>
         </div>
         <div class="col-sm-2 col-6 align-self-center text-center" id="R3C6">
             <a href="index.php?page=heaterInfo">

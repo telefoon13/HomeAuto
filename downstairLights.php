@@ -19,16 +19,18 @@
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R2C4">
         <a href="index.php?page=switchlight&ip=192.168.178.150&port=3">
-            <img src="img/downStairs/abc-block.svg" alt="abc" class="w-75">
-            <h5>Speelhoek</h5>
+            <img src="img/downStairs/restaurant.svg" alt="abc" class="w-75">
+            <h5>Eetkamer</h5>
         </a>
     </div>
+    <!--
     <div class="col-sm-2 col-6 align-self-center text-center" id="R2C5">
         <a href="index.php?page=switchlight&ip=192.168.178.161&port=1">
             <img src="img/christmas-tree.svg" alt="christmas-tree" class="w-75">
             <h5>Kerstboom</h5>
         </a>
     </div>
+    -->
     <div class="col-sm-2 col-6 align-self-center text-center" id="R2C6">
         <a href="index.php?page=switchlight&ip=192.168.178.150&port=4">
             <img src="img/downStairs/kitchen.svg" alt="kitchen" class="w-75">
@@ -39,8 +41,8 @@
 <div class="row" id="R3">
     <div class="col-sm-2 col-6 align-self-center text-center" id="R3C1">
         <a href="index.php?page=switchlight&ip=192.168.178.151&port=1">
-            <img src="img/downStairs/restaurant.svg" alt="restaurant" class="w-75">
-            <h5>Eetkamer</h5>
+            <img src="img/downStairs/abc-block.svg" alt="restaurant" class="w-75">
+            <h5>Speelhoek</h5>
         </a>
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R3C2">
