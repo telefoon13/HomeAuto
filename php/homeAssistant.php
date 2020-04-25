@@ -25,6 +25,19 @@ function getStateEntity($entity_id){
     }
 }
 
+function getCameraEntity($entity_id){
+    global $Bearertoken;
+    global $baseURL;
+    //Do the call
+    $call = cUrl($baseURL."camera_proxy/$entity_id", "GET", null, false, null, $Bearertoken);
+    //Only return the data if HTTP code equals 200 else return HTTP code
+    if ($call[0] == "200"){
+        return $call[1];
+    } else {
+        return $call[0];
+    }
+}
+
 function postStateEntity($entity_id, $state){
     global $Bearertoken;
     global $baseURL;

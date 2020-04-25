@@ -58,8 +58,9 @@
                 <img alt="Question" src="img/weather/question.svg" class="w-50">
             </div>
             <div class="col-sm-2 col-6 align-self-center text-center" id="R1C5">
-                <a href="index.php?page=exit"><img src="img/exit.svg" alt="Exit" class="w-50">
-                    <!--<h5>Exit</h5>-->
+                <a href="index.php?page=alarm">
+                    <img src="img/security.svg" alt="security" class="w-50">
+                    <!--<h5>Alarm</h5>-->
                 </a>
             </div>
         </div>

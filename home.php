@@ -24,25 +24,21 @@
         </a>
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R2C5">
-        <a href="index.php?page=camera">
-            <img src="img/cctv.svg" alt="cctv" class="w-75">
-            <h5>Camera's</h5>
-        </a>
+        &emsp;
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R2C6">
-        <a href="index.php?page=usage">
-            <img src="img/meter.svg" alt="meter" class="w-75">
-            <h5>Verbruik</h5>
+        <a href="index.php?page=switchlight&ip=192.168.178.154&port=1">
+            <img src="img/light.svg" alt="light" class="w-75">
+            <h5>Alles uit</h5>
         </a>
     </div>
 </div>
 <div class="row" id="R3">
     <div class="col-sm-2 col-6 align-self-center text-center" id="R3C1">
-        <a href="index.php?page=scripts">
-            <img src="img/automation.svg" alt="automation" class="w-75">
-            <h5>Automatisatie</h5>
+        <a href="index.php?page=usage">
+            <img src="img/meter.svg" alt="meter" class="w-75">
+            <h5>Verbruik</h5>
         </a>
-
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R3C2">
         <a href="index.php?page=scenes">
@@ -51,24 +47,21 @@
         </a>
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R3C3">
-        <a href="index.php?page=alarm">
-            <img src="img/security.svg" alt="security" class="w-75">
-            <h5>Alarm</h5>
+        <a href="index.php?page=camera">
+            <img src="img/cctv.svg" alt="cctv" class="w-75">
+            <h5>Camera's</h5>
         </a>
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R3C4">
         &emsp;
     </div>
     <div class="col-sm-2 col-6 align-self-center text-center" id="R3C5">
+        &emsp;
+    </div>
+    <div class="col-sm-2 col-6 align-self-center text-center" id="R3C6">
         <a href="index.php?page=switchlight&ip=192.168.178.154&port=2">
             <img src="img/light.svg" alt="light" class="w-75">
             <h5>Alles aan</h5>
-        </a>
-    </div>
-    <div class="col-sm-2 col-6 align-self-center text-center" id="R3C6">
-        <a href="index.php?page=switchlight&ip=192.168.178.154&port=1">
-            <img src="img/light.svg" alt="light" class="w-75">
-            <h5>Alles uit</h5>
         </a>
     </div>
 </div>

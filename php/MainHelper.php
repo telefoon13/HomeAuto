@@ -74,10 +74,12 @@ function cUrl($url,$method = "GET",$body = null, $useCookie=false, $header = nul
             break;
     }
     //HTTP header JSON
-    if (checkFilled($header)){
+    if (checkFilled($header) && !checkFilled($token)){
         curl_setopt($cUrl, CURLOPT_HTTPHEADER, array($header));
-    } else if (checkFilled($token)){
+    } else if (checkFilled($token) && !checkFilled($header)){
         curl_setopt($cUrl, CURLOPT_HTTPHEADER, array('Content-Type: application/json',$token));
+    } else if (checkFilled($token) && checkFilled($header)){
+        curl_setopt($cUrl, CURLOPT_HTTPHEADER, array($header,$token));
     } else {
         curl_setopt($cUrl, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
     }
